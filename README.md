@@ -1,108 +1,273 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+heroku
+postgreSQL
+cloudinary
 
-Welcome Oliver-RC,
+using CI Django Blog walkthrough to help build inital restaurant blog.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# My Reward Chart
 
-`python3 -m http.server`
+My Reward Chart is an interactive 'reward star chart' website. Primarily to be used by the parent / carer on a weekly basis to track the number of stars their child has earned for good behaviour. In return for earning stars, the child can choose a reward at the end of the week based on the number of stars achieved. Also, within the website is an interactive 'rock, paper, scissors' game for the child to interact with.
 
-A blue button should appear to click: _Make Public_,
+The sites simple look and feel, ease of navigation and interactive content will enable both the parent / carer and child to use together and/or independently. A core aim is to bring a sense of inclusion for the child; to lead what tasks they want to and what reward they want to pick, alongside an fun, interactive game.
 
-Another blue button should appear to click: _Open Browser_.
+![Responsive Mockup](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/responsive-mock-up.JPG)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Showcase
 
-A blue button should appear to click: _Make Public_,
+A deployed link to the website can be found [here](https://oliver-rc.github.io/reward-chart/)
 
-Another blue button should appear to click: _Open Browser_.
+## User Experience (UX)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+ ### User Stories
 
-To log into the Heroku toolbelt CLI:
+  #### First Time Visitor Goals
+   1. As a first time visitor I want to understand what the site is about and who the site is intended for. Starting with the title and core content of the page, these elements should give a clear idea.
+   2. As a first time visitor the home / index page should be the starting point of the site and include the main interaction for the user.
+   3. As a first time visitor the flow of each page should read top to bottom with the interactive content following suit. The home / index page should then allow the user to flow onto the next relevant page.
+   4. As a first time visitor I want the content to be in a consistant and simple structure. Navigation bar at the top, main body of the page and footer at the bottom.
+   5. As a first time visitor the interactive content should be intuitive and not require content heavy text to explain how to use.
+  #### Returning Visitor Goals
+   1. As a returning visitor I want to be able to update the interactive reward table with either a new task or star achieved.
+   2. As a returning visitor I want to see the site and its content in the same state as it was previously left in order to track reward progress throughout the week.
+   3. As a returning visitor I want to be able to interact with the built in 'rock, paper, scissors' game.
+   4. As a returning visitor I want to be able to locate the social media links in order to gain further insight and information but delivered through the different platforms: Youtube, Instagram, Facebook and Twitter.
+  #### Frequent User Goals
+   1. As a frequent user once a full week has been completed, I want to be able to reset the page in order to start a new week.
+   2. As a frequent user I want the site to be my main 'reward' system for my child. I want the child to eventually become independant in using the site and be the lead in uploading tasks.
+   3. As a frequent user I want to be able to provide user feedback to the owner of the site.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Design
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+ ### Structure
+  - The site will be made up of an initial home page, a game page, a reward page and a feedback form page.
+  - Every page will be in a consistant layout aiding simple usability. 
+    1. Navigation bar at the top with page title to the left and page links to the right.
+    2. Core content of the page.
+    3. Social media footer at the bottom.
+    4. Consistant colour scheme throughout each page specifically on the header / nav bar, page link buttons and footer.
+ ### Colour Scheme
+ - Colour scheme of the site designed using: https://coolors.co/
+ - The header, nav bar and footer make up the leading colours of the site, that being Mantis, a subtle, light off green, with green being a positive colour related to children and learning.
+ - The font colour both in the headings and the body of the site is black as it is clear and consistant. 
+ - Each section of the site has a distinct background colour with a supported border, this is consistant on each page. The same goes for each clickable button alongside hover effects when able to click and generate an action.
+ ![Site Colour Scheme](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/my-reward-chart-colour-scheme.png)
+ ### Typography
+ - The [Bree Serif](https://fonts.google.com/specimen/Bree+Serif?query=bree+serif) font is used for the headings throughout the site with Serif as the fallback. A relevant style for charts which is both professional and eye to read.
+ - The [Open Sans](https://fonts.google.com/specimen/Open+Sans?query=open+sans) font is used for the content of the site with Sans-Serif as the fallback. Open Sans works well against the headings giving the font clear lines to read, adult and child friendly.
+ ### Imagery
+ - Images were only used on the reward page to provide a visual representation of the rewards available. They give the child a clear understanding of the type of reward. They should also be inspirational enough for the child to be motivated to achieve stars for good behaviour.
+ - Icons feature heavily across the site with the 'star' icon being the hero in both the title and reward chart table. The 'star' features in the tally count and reward page giving the user visual reminders as to what the stars are for. Within the 'rock, paper, scissors' game, hand icons were used providing a consistant look and feel.
 
-------
+## Wireframe
+ - Desktop Wireframe 
+   - [Home Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-desktop/my-star-chart-page-homepage-desktop.png)
+   - [Star Game Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-desktop/star-booster-game-page-desktop.png)
+   - [Reward Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-desktop/my-reward-page-desktop.png)
+   - [Feedback Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-desktop/feedback-page-desktop.png)
+ - Tablet Wireframe
+   - [Home Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-tablet/my-star-chart-page-homepage-tablet.png)
+   - [Star Game Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-tablet/star-booster-game-page-tablet.png)
+   - [Reward Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-tablet/my-reward-page-tablet.png)
+   - [Feedback Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-tablet/feedback-page-tablet.png)
+ - Mobile Wireframe
+   - [Home Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-mobile/my-star-chart-page-homepage-mobile.png)
+   - [Star Game Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-mobile/star-booster-game-page-mobile.png)
+   - [Reward Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-mobile/my-reward-page-mobile.png)
+   - [Feedback Page](https://github.com/Oliver-RC/reward-chart/blob/main/wireframe/wireframe-mobile/feedback-page-mobile.png)
 
-## Release History
+## Current Features
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ ### Navigation Bar
+ - A responsive navigation bar featured on all four pages with links to the main home page - the star chart, the star boost game page, my reward page and feedback form page, these are positioned to the right of the screen and will be responsive on small screens dropping to a hamburger menu. On the left is the website title that is clickable and takes the user back to the homepage. The navigation bar is identical on each page to provide a consistent look and ease of navigation.
+ - This section allows the user to easily navigate from page to page without having to use the back button or relooping back to the homepage.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+ ![Nav Bar](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/nav-bar.JPG)
+ ### My Task Input
+ -  The first interactive part of the site which the parent / carer is to use with their child in order to set the task for the week ahead.
+ - An input field where the user types the title of the task and by either pressing enter or clicking the add button will add the task to the reward table below.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+ ![My Task Input](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/task-input.JPG)
+ ### My Reward Chart Stars
+ -  This section of the site will count the numbers of stars achieved for the current week. The user will be able to monitor the progress as the week goes by. It is also a motivation tool for the child to keep up with good behaviour.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+ ![My Reward Chart Stars](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/reward-chart-stars.JPG)
+ ### Reward Chart
+ - The tasks once added from the 'my task' section will remain in the table indefinitely until the 'end of the week' reset button is clicked.
+ - Everytime the child succeeds in the task for that day, the user is able to click on the faded star in the table to bring it to life.
+ - The table is responsive, on smaller screens there is no horizontal scroll, the table reverts to a new style that is mobile friendly.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+ ![Reward Chart](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/reward-chart.JPG)
+ ### Weekly Reset & Following Page Buttons
+ - When a new week is about to start, the user is able to click the reset button and it will clear the data from the reward table above.
+ - Below the reset button there are links to the subsequent pages that follow the order of completing the reward chart. Both a star game and reward page links. 
+ - The background colour of the buttons are also used on their relevant pages in order to provide a visual reminder to the user as to which page they navigated to.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+ ![Weekly Reset & Following Page Buttons](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/reset-page-buttons.JPG)
+ ### The Footer
+ - The footer section houses icons of the relevant social media platforms available which allows the user to click on, thus directing them to the relevant social page. The link will open up in a new tab as it gives the user the option to remain on the current page or click onto the social media tab that has just opened.
+ - The footer encourages the user to keep connected via social media. It also gives the user confidence of the business / brand given the multiple social plaforms used.
+ - The footer is responsive and featured at the bottom on all four pages. The footer is identical on each page to provide a consistent look and ease of navigation.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+ ![Footer](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/footer.JPG)
+ ### Star Booster Game with Game Score
+ - A game of rock, paper, scissors for the user to play vs the computer. This brings further site interaction and a sense of fun and involvement, rather than just a reward chart.
+ - There is a game score tally counter above the game board. The parent / carer can decided if the stars earned are to be used toward the final reward choice at the end of the week.
+ - The page layout follows the consistent structure delivered across the site with a navigation bar at the top and the footer at the bottom. The colour scheme of the game matches the game button on the home page with the hand icons set in matching nav colours.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+ ![Star Booster Game with Game Score](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/star-game.JPG)
+ ### Reward Page
+ - Upon the user and child completing the weekly tasks, they would navigate to the reward page in order to make their selection. Each reward is listed with a visual picture, name of reward and number of stars the reward costs. The user clicks on the 'claim reward' button to make their choice. Upon so an alert box appears advising them of their choice.
+ - The page layout follows the consistent structure delivered across the site with a navigation bar at the top and the footer at the bottom.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+ ![Reward Page](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/reward-page.JPG)
+ ### Feedback Page
+ - The feedback page will allow the user to send in feedback to the site owners using the form provided. It is important to gain feedback in order to improve and develop the site further. 
+ - The user will be asked to submit their full name, email address and feedback comments.
+ - Below the title of the page is a small sub heading and sentence explaining the reason for the form.
+ - The page layout follows the consistent structure delivered across the site with a navigation bar at the top and the footer at the bottom.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+ ![Feedback Page](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/feedback-page.JPG)
+ ### Responsive Site
+ - The site is responsive across various screen sizes from desktop, tablet and through to mobile. The user needs to be able to easily read, navigate and interact with the content across various devices.
+ - Specific screen break points are: iphone 5 up to ipad (320px - 767px), ipad up to ipad Pro (768px - 1023px), ipad Pro to desktop (1024px +).
+ - The use of Flexbox CSS helped create a responsive site.
+ ### Accessibility
+ - All images have an alt attribute taking into account users who are visually impaired. The site has contrasting background colours to text enabling an easy read. Background button colours have been set to match the relevant pages defined colour. Semantic HTML has been used to support machines to understand the layout of the site. All links have hover over effect.
+ 
+## Features Left to Implement
+ - Stars achieved from the reward chart tasks are to be represented on the games page. If the user succeeds in acheiving more stars from playing the game then the reward chart stars and the game stars are to be totalled together.
+ - The totalled stars to be represented on the 'My Reward' page. From this total, once a reward is claimed, the cost of the reward is to be deducted from the total stars. This will bring together the links between the chart page, game page and reward page.
+ - On the reward chart, to include a delete button removing a single task.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Technologies Used
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+ ### Languages Used
+  - [HTML](https://en.wikipedia.org/wiki/HTML5)
+  - [CSS](https://en.wikipedia.org/wiki/CSS)
+  - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+ ### Frameworks, Libraries & Programs Used
+  - Balsamiq: used to create the wireframe during the design process.
+  - Gitpod: used for writing the code and using the command line to commit and push to GitHub.
+  - Git: used for version control through the gitpod terminal to commit to Git and push to GitHub.
+  - GitHub: used to store the projects code after being pushed from Git. Used to host repository.
+  - Hover.css: used for the links in the nav bar to underline, bold and turn background colour a lighter green. Used to reverse the background colour, font colour and bold the text in the buttons. The curser turns to a hand icon when hovered over link / clickable button.
+  - Google Fonts: used to import the 'Bree Serif' font with 'Serif' as the fallback font for the headings and 'Open Sans' font with 'Sans-Serif' as the fallback font for the content of the site.
+  - Font Awesome: used for icons in the header, footer and icons within the content of the site for aesthetic and UX purposes.
+  - Favicon.io: used to generate the favicon icon of the site.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Testing
+ - I tested the sites interactive content to make sure the functionality worked as intended. In summary:
+   - the reward input allowed the typed task to be added to the table with either an enter press or click on 'add' button. 
+   - the stars in the chart are clickable to remove the opacity. 
+   - the stars achieved counter totals the number of clicked stars.
+   - the content of the table remains even when the browser is refreshed or the user comes back to the site.
+   - the end of the week reset button removes the chart tables content.
+   - playing the game delivers the expected result and are correct.
+   - the game score counter tallys correctly and the stars earned counter calculates correctly.
+   - the game instructions alert box appears when clicked on.
+   - the 'claim reward' buttons bring up an expected alert when clicked on.
+   - the feedback form submits correctly with the 'required' propoerty used where needed.
+   - all the links work i.e. nav links take the user to the correct page, header logo clicks back through to the home page, footer social media icons open up the site in a new tab.
+   - the link hovers work as intended and show the correct styling when cursor over.
+   - the pages are responsive and look as intended based on the screen size, with mobile, tablet and desktop the main breakpoints.
+   - I asked three family members to test out the site too by sending them the url link and provide honest feedback where possible.
+ ### Google Inspect
+  - I coded the site using mobile first design. Constantly using Google Inspect in the devtools to check my layout, make amendments, re-check and therefore delivering an end result that fits the brief and user goals. 
+ ### Validator Testing
+  #### HTML - 
+   - All HTML validation was passed through the official W3C validator.
+   - index.html returned with two errors, I had duplicated id="star" more than once for the repeat of the star icons in the table. Corrected to number the star ids element. On line 158, I did not include a space between href and class tags, corrected.
+   ![Home Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/index-validator.JPG)
+   - game.html had one error on line 108 whereby I did not include a space between href and class tags, corrected.
+   ![Game Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/game-validator.JPG)
+   - reward.html returned no errors.
+   ![Reward Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/reward-validator.JPG)
+   - feedback.html had two errors on line 60 and 63 whereby I did not include a space between placeholder and required tags, both corrected.
+   ![Feedback Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/feedback-validator.JPG)
+  #### CSS - 
+   - No errors were found when passing through the official (Jigsaw) validator.
+   ![CSS Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/css-validator.JPG)
+   - Two warnings were displayed, one due to using external style sheet for Google Fonts, one for an unknown vendor extension which I have created to help with the background colour maintenance of the site.
+   ![CSS Validator Warnings](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/css-warning-validator.JPG)
+  #### JavaScript - 
+   - JS Hint Checker was used to highlight any functional errors, none returned. The only warning was regarding semicolons being missing on selected lines. Upon research, this is optional. Nevertheless I felt best practice to use semicolons so corrected both script.js and gsame.js files.
+ ### Performance Testing
+  - Tested the site on Google Developer Tools Lighthouse for desktop and mobile with good results on both. Performance, accessibility and SEO scored top marks. Best practices at 87 due to browser 404 errors but nothing of concern which impacts the site useability and performance.
+  ![Lighthouse Results Desktop](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/accessibility-desktop.JPG)
+  ![Lighthouse Results Mobile](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/accessibility-mobile.JPG)
+  - Tested on [Wave](https://wave.webaim.org/) which helped me with accessibility, making sure my layout and design worked well with screen readers.
+ ### User Stories Testing
+  - First time user once on the site is able to understand the reasoning  of the site by the site heading but also the following content of the first page with clear section titles. The page reads from top to bottom with the task section and reward chart being the main content. Page links towards the bottom aid the journey of the user onto the next pages.
+  - Returning user is able to interact with the site as intended with the reward table tasks saved to local storage. The game page restarting when returning and the footer icon links enabling the user to search for further content offsite.
+  - Frequent user is able to reset the saved tasks and start afresh by clicking on the end of week reset button. The site is clearly structured and encompasses all the required elements to treat the site as the main reward system for the parent / carer. 
+  ### Further Testing
+  - Site tested on Google Chrome, Microsoft Edge, Firefox and Safari across the responsive page break points with CSS Flexbox working as intended on each page.
+  - The site tested on the above browsers but also using the browsers on different operating systems, Microsoft and Apple. This was to check for all links, site elements, screen layout and functionality working as intended. 
+  - The site was also tested on mobile, both Samsung Note 10 and iphone 10. Again using Google Chrome on both devices, Safari on Apple and Samsung Internet Browser.
+  - All links on the site tested and directed to the correct page.
+  ### Bugs
+  - The reward chart table width when applying margins left and right would cause the table to overflow the page. Corrected by setting the width to 100%.
+  - Issues with the footer not remaining at the bottom of the index and feedback page as the content of the body was not long enough. Resolved by extending the margin on the elements above to push footer to the bottom. Position absolute would cause the footer to sit ontop of the above elements and position fixed would also stick the footer above elements on the page.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Deployment
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+ ### Hosting
+  - The site was deployed to GitHub Pages using the following steps:
+   - Log in to GitHub and locate my repository: Oliver-RC / collection-of-crafts.
+   - Locate the 'Settings' link in the navigation bar an click into.
+   - Find the 'Pages' section within Settings and click into. 
+   - Under 'source', click on 'none' and a dropdown will apear, click on 'main' and save.
+   - The page will refresh (it may take a while to update) and there will be a link stating: 'Your site is published at'.
+   - Click on the link to open the site.
+ ### Cloning
+  - To make a local Clone:
+   - Log into GitHub or creat an account and navigate to the gitpod repository [here](https://github.com/Oliver-RC/reward-chart).
+   - Under the repository name, above the list of files, click on a button called 'Clone'.
+   - If cloning with HTTPS, make sure HTTPS is underlined and then click on the clipboard icon to copy. Once clicked the icon will turn to a tick.
+   - Open your local IDE open the terminal.
+   - Change the current working directory to the location where you want the cloned directory to be.
+   - Type git clone, and then paste the URL you copied earlier.
+   - Press enter to create your local clone.
+ ### Updates and Push to Hosting
+   - Any updates to the code will need to be commited and pushed to the master branch. This will automatically update the hosted site.
 
-------
+## Credits
 
-## FAQ about the uptime script
+ ### Content
+  - The inspiration for the interactive reward chart was gained from Web Dev Simplified - How to Code A Better To-Do List - Tutorial [YouTube](https://www.youtube.com/watch?v=W7FaYfuwu70&t=517s). I was able to understand Javascript that bit more and learn from the content whilst adapting it to my interactive reward chart.
+  - For the star game, I took ideas from many rock, paper, scissors javascript code, however Code with Ania Kubow - 3 ways to code Rock Paper Scissors in JavaScript (Beginner to Intermediate to Advanced!) [YouTube](https://www.youtube.com/watch?v=RwFeg0cEZvQ) was credited with my key learning.
+  - I wanted my nav bar to be responsive using Javascript therefore used Web Dev Simplified - Responsive Navbar Tutorial [YouTube](https://www.youtube.com/watch?v=At4B7A4GOPg) for further insight on how to action.
+  - The reward chart needed to be responsive on mobile and display content suited to the screen size. I used IB-Media - Making a Responsive Table Using HTML & CSS [YouTube](https://www.youtube.com/watch?v=QjW5TsNquH8) for inspiration and learning.
+  - Within my reward table I wanted clickable star icons using checkboxes, for this I took learning from [CSS-Tricks](https://css-tricks.com/the-checkbox-hack/)
+ ### Media
+  - The Favicon was created from Favicon.io [here](https://favicon.io/favicon-generator/)
+  - Icons included within the content of the size used from Font Awesome [here](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free)
+  - Images used across the site taken from Unsplash [here](https://unsplash.com/). Specfic images used are:
+   - A Sweet Treat Photo by [Analia Baggiano](https://unsplash.com/s/photos/sweets?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash)
+   - Extra Time on Tablet Photo by [José Reyes](https://unsplash.com/s/photos/tablet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash)
+   - A New Magazine Photo by [Omar Flores](https://unsplash.com/s/photos/kids-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash)
+   - A New Toy Photo by [Robo Wunderkind](https://unsplash.com/s/photos/childrens-toys?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash)
+ ### Additional Resource
+  - [Code Institue sample README file](https://github.com/Code-Institute-Solutions/readme-template/blob/master/README.md) helped me to further build my own README for Collection of Crafts (MS1) project.
+  - [Code Institue old sample README file](https://github.com/Code-Institute-Solutions/SampleREADME#readme) helped me to further build my own README for Collection of Crafts (MS1) project.
+  - [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) was referenced for the languages used in this project. 
+  - [Mockup design](http://ami.responsivedesign.is/#) used to create my responsive design file.
+  - [W3schools](https://www.w3schools.com/) for various code information and trouble shooting.
+  - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for more Javascript specific syntax and function code information.
+  - [Favicon](https://favicon.io/) used to generate the favicon icon of the site.
+  - [Google fonts](https://fonts.google.com/) used to import the site fonts.
+  - [Balsamiq wireframe](https://balsamiq.com/) used to create the wireframe during the design process.
+  - [Font Awesome](https://fontawesome.com/) used for icons in the footer and icons within the content of the site for aesthetic and UX purposes.
+  - [Unsplash](https://unsplash.com/) images taken from unsplash.
+  - [HTML Validator](https://validator.w3.org/) used to test validity of HTML.
+  - [CSS Validator](https://validator.w3.org/) used to test validity of CSS.
+  - [Wave Accessibility](https://wave.webaim.org/) used to test accessibility of the site.
+  - [JS Hint Checker](https://jshint.com/) used to test validity and working functions of Javascript.
+ ### Acknowledgements
+  - Brian Macharia - Mentor support. A thank you for your guidance throughout the project.
+  - Code Institue Slack Community - A great resource and helpful community supported me through the challenges encountered.
 
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+**This project is for educational use only and was created for the Code Institue Portfolio Project 2: JavaScript Essentials**
