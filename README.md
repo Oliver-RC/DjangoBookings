@@ -1,6 +1,8 @@
 heroku
 postgreSQL
 cloudinary
+udemy
+pexels
 
 using CI Django Blog walkthrough to help build inital restaurant blog.
 
