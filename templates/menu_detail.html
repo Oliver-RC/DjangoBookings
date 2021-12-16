@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <h1>Menu Detail</h1>
+
+    <h2>{{ menu.meal_name }}</h2>
+    <img src="{{ menu.featured_image.url }}" alt="">
+
+    <h3>{{ menu.description }}</h3>
+    <h3>{{ menu.vegetarian_vegan }}</h3>
+    <h3>{{ menu.price }}</h3>    
+</div>
+
+{%endblock%}
+
