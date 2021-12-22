@@ -17,8 +17,8 @@
             <img src="{{ menu.featured_image.url }}" alt="picture of meal" class="meal-image">
             
             <h3>{{ menu }}</h3>
+            <p><strong>Price: £{{ menu.price }}</strong></p>            
             <p>Vegetarian: {{ menu.vegetarian_vegan }}</p>
-            <p>Price: £{{ menu.price }}</p>
             <p><a class="btn btn-secondary" href="{% url 'menu_detail' menu.slug %}">View details »</a></p>
         </div> 
     {% endfor %}      
