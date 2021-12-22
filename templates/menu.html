@@ -2,8 +2,16 @@
 
 {% block content %}
 
+<div class="title-description">
+    <h2>Menu</h2>
+    <p>
+        Whether it's breakfast, lunch or dinner, we have your hunger covered! Locally sourced, fresh ingredients are at the heart of our dishes. 
+            <br>
+        Take a peak at our dishes below, find your favourites and we look forward to welcoming you to Arthur & Alfie's.
+    </p>
+</div>
+
 <div>
-    <h2>menu</h2>
     {% for menu in menu_list %}
         <h3><a href="{ % url 'menu_detail' menu.slug % }"> {{ menu }} </a></h3>
     {% endfor %}

@@ -2,6 +2,17 @@ nav {
     background-color: #001b2e;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Lilita One', cursive;
+}
+
+p {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.2rem;
+}
+
 .title {
     font-family: 'Lilita One', cursive;
     font-size: 2rem;
@@ -10,4 +21,57 @@ nav {
 .header-image {
     height: 60vh;
     object-fit: cover;
+}
+
+.title-description {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #294c60;
+    color: white;
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-image {
+    height: 33vh;
+    width: 100%;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #294c60;
+}
+
+.post-link:hover,
+.page-link {
+    color: #53131e;
+}
+
+.post-title {
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: #adb6c4;
 }
