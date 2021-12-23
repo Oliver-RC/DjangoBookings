@@ -35,7 +35,8 @@ p {
     position: relative;
 }
 
-.masthead {
+.masthead,
+.masthead-meal {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
@@ -55,7 +56,8 @@ p {
     overflow: hidden;
 }
 
-.blog-image {
+.blog-image,
+.meal-image {
     height: 33vh;
     width: 100%;
 }
@@ -70,12 +72,14 @@ p {
     color: #53131e;
 }
 
-.post-title {
+.post-title,
+.meal-title {
     margin-top: 20%;
     margin-left: 5%;
 }
 
-.post-subtitle {
+.post-subtitle,
+.meal-subtitle {
     margin-left: 5%;
     color: #adb6c4;
 }
@@ -89,4 +93,12 @@ p {
     height: 200px;
     width: 200px;
     object-fit: contain;
+}
+
+.meal-link {
+    color: #294c60;
+}
+
+.meal-container{
+    width: 70vw;
 }
