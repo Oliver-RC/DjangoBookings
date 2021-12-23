@@ -7,6 +7,7 @@ google fonts - Lilita One (TITLE) and PT Sans Narrow (Body)
 Font Awesome
 Bootstrap
 Coolors
+Django All Auto
 
 using CI Django Blog walkthrough to help build inital restaurant blog.
 
