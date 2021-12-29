@@ -3,11 +3,11 @@
 {% block content %}
 
 <div class="container-fluid meal-container">
-    <div class="card mb-3">
-        <img src="{{ menu.featured_image.url }}" class="card-img-top img-thumbnail text-center img-fluid p-4" alt="picture of meal">    
+    <div class="card mb-3 text-center">
+        <img src="{{ menu.featured_image.url }}" class="card-img-top img-thumbnail text-center img-fluid p-4 mx-auto meal-detail-image" alt="picture of meal">    
         <div class="card-body">
             <h3 class="card-title">{{ menu.meal_name }}</h3>
-            <p class="card-text">{{ menu.description }}</p>
+            <p class="card-text">{{ menu.description | safe }}</p>
             <p class="card-text">Price: £{{ menu.price }}</p>
             <p class="card-text"><small class="text-muted">Vegetarian: {{ menu.vegetarian_vegan }}</small></p>
         </div>

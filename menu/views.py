@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Menu
+from .models import Menu, Category
 
 
 class MenuList(generic.ListView):
@@ -17,3 +17,7 @@ class MenuDetail(View):
         menu = get_object_or_404(queryset, slug=slug)
 
         return render(request, 'menu_detail.html', {"menu": menu})
+
+
+class CategoryList(generic.ListView):
+    model = Category

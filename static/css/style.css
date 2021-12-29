@@ -102,3 +102,8 @@ p {
 .meal-container{
     width: 70vw;
 }
+
+.meal-detail-image {
+    width: 40vh;
+    height: auto;
+}
