@@ -33,7 +33,7 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
+            <a class="nav-link" href="{% url 'menu' %}">Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Book Now</a>
@@ -42,7 +42,7 @@
             <a class="nav-link" href="#">Newsletter</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link" href="{% url 'blog' %}">Blog</a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
@@ -92,6 +92,20 @@
     </button>
   </div>
 
+  <!-- Alert Message -->
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+  </div>
+
   <main class="flex-shrink-0">
     {% block content %}
     <!-- Content Goes here -->
@@ -122,6 +136,15 @@
       </ul>
     </footer>
   </div>
+
+  <!-- JS for Alert Messages -->
+  <script>
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 3000);
+</script>
 
 </body>
 
