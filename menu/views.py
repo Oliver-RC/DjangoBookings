@@ -8,6 +8,7 @@ class MenuList(generic.ListView):
     queryset = Menu.objects.filter(status=1)
     template_name = 'menu.html'
     paginate_by = 8
+    extra_context = {'category_list': Category.objects.all()}
 
 
 class MenuDetail(View):
@@ -17,7 +18,3 @@ class MenuDetail(View):
         menu = get_object_or_404(queryset, slug=slug)
 
         return render(request, 'menu_detail.html', {"menu": menu})
-
-
-class CategoryList(generic.ListView):
-    model = Category
