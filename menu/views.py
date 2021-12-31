@@ -7,7 +7,6 @@ class MenuList(generic.ListView):
     model = Menu
     queryset = Menu.objects.filter(status=1)
     template_name = 'menu.html'
-    paginate_by = 8
     extra_context = {'category_list': Category.objects.all()}
 
 

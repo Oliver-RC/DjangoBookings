@@ -11,15 +11,7 @@
     </p>
 </div>
 
-<!-- <div>
-    <ul>
-        {% for category in category_list %}
-            <li>{{ category }}</li>
-        {% endfor %}
-    </ul>
-</div> -->
-
-<div class="container-fluid">
+<div class="container">
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
         {% for category in category_list %}
@@ -28,13 +20,13 @@
                 {{ category }}
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
                 <div class="accordion-body">
                     <div class="container-fluid meals">
                         <div class="row">
                         {% for menu in menu_list %} 
                             {% if menu.category == category %}
-                                <div class="col-lg-3">
+                                <div class="col-md-4">
                                     <img src="{{ menu.featured_image.url }}" alt="picture of meal" class="meal-image">
                                     <h3 class="meal-link">{{ menu }}</h3>
                                     <p class="meal-link"><strong>Price: £{{ menu.price }}</strong></p>            
@@ -51,7 +43,5 @@
         </div>
     </div>    
 </div>
-
-
 
 {%endblock%}
