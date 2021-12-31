@@ -7,12 +7,13 @@
     <p>
         Whether it's breakfast, lunch or dinner, we have your hunger covered! Locally sourced, fresh ingredients are at the heart of our dishes. 
             <br>
-        Take a peak at our dishes below, find your favourites and we look forward to welcoming you to Arthur & Alfie's.
+        Take a peak at our dishes below, find your favourites and we look forward to welcoming you to Arthur &amp; Alfie's.
     </p>
 </div>
 
 <div class="container">
     <div class="accordion" id="accordionExample">
+        <!-- Menu Categories -->
         <div class="accordion-item">
         {% for category in category_list %}
             <h2 class="accordion-header" id="headingOne">
@@ -22,6 +23,7 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
                 <div class="accordion-body">
+                    <!-- Meals -->
                     <div class="container-fluid meals">
                         <div class="row">
                         {% for menu in menu_list %} 
