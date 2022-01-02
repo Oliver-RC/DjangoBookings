@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <div class="title-description">
     <h2>Book A Table</h2>
     <p>
@@ -12,11 +14,12 @@
 <div class="container">
     <!-- Table Booking Form -->
     <form method="POST" action="">
+        {{ form | crispy }}
         {% csrf_token %}
-        {{ form }}
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+</div>
 
     <!-- <form method="post">
         {% csrf_token %}
