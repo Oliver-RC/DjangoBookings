@@ -9,8 +9,8 @@ class BookingForm(forms.ModelForm):
         widgets = {
             'first_name': forms.TextInput(attrs={'placeholder': 'please enter your first name'}),
             'last_name': forms.TextInput(attrs={'placeholder': 'please enter your last name'}),
-            'email': forms.TextInput(attrs={'placeholder': 'name@email.com'}),
-            'phone': forms.TextInput(attrs={'placeholder': '01234567890'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'name@email.com'}),
+            'phone': forms.NumberInput(attrs={'placeholder': '01234567890'}),
             'requirements': forms.TextInput(attrs={'placeholder': 'please list any booking requirements e.g. highchair, dietary requirements, access needs etc.'}),
-            'date': forms.TextInput(attrs={'placeholder': 'YYYY-MM-DD'}),
+            'date': forms.DateInput(attrs={'type': 'date'}),
         }
