@@ -21,7 +21,7 @@ class Booking(models.Model):
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
     phone = models.IntegerField()
-    requirements = models.TextField()
+    requirements = models.TextField(blank=True, null=True)
     number_of_guests = models.IntegerField()
     date = models.DateField()
     time = models.CharField(max_length=5, choices=TIME_CHOICES, default='12:00')
