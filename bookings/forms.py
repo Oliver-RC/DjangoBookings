@@ -14,3 +14,4 @@ class BookingForm(forms.ModelForm):
             'requirements': forms.TextInput(attrs={'placeholder': 'please list any booking requirements e.g. highchair, dietary requirements, access needs etc.'}),
             'date': forms.DateInput(attrs={'type': 'date'}),
         }
+
