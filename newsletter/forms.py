@@ -1,7 +1,8 @@
 from django import forms
+from .models import Newsletter
 
 
-class NewsletterSignUp(forms.Form):
-    first_name = forms.CharField(max_length=50)
-    last_name = forms.CharField(max_length=50)
-    email = forms.EmailField()
+class NewsletterSignUp(forms.ModelForm):
+    class Meta:
+        model = Newsletter
+        fields = '__all__'
