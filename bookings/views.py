@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
 
@@ -8,6 +9,7 @@ def reserve_table(request):
 
     if reserve_form.is_valid():
         reserve_form.save()
+        messages.success(request, 'Success!')
         reserve_form = BookingForm()
     else: reserve_form = BookingForm()
 
