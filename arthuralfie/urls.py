@@ -24,4 +24,5 @@ urlpatterns = [
     path('blog/', include("blog.urls"), name="blog_urls"),
     path('newsletter/', include("newsletter.urls"), name="newsletter"),
     path('accounts/', include("allauth.urls")),
+    path('', include("index.urls"), name="index"),    
 ]
