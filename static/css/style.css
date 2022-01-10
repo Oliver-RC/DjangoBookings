@@ -110,6 +110,10 @@ p {
     height: auto;
 }
 
+.accordion-button {
+    color: #294c60;
+}
+
 .alignment {
     text-align: center;
 }
