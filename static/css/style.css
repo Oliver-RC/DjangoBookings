@@ -7,6 +7,7 @@ h2,
 h3,
 h4 {
     font-family: 'Lilita One', cursive;
+    color: #294c60;
 }
 
 p {
@@ -107,4 +108,29 @@ p {
 .meal-detail-image {
     width: 40vh;
     height: auto;
+}
+
+.alignment {
+    text-align: center;
+}
+
+.icon {
+    font-size: 2em;
+    color: #53131e;
+}
+
+.icon-link {
+    color: #294c60;
+}
+
+.icon-link:hover {
+    color: #294c60;
+    text-decoration: underline solid #53131e 5px;
+}
+
+.news-card {
+    height: 30vh;
+    width: auto;
+    object-fit: cover;
+    filter: brightness(60%);
 }

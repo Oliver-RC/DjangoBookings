@@ -13,51 +13,90 @@
     </p> 
 </div>
 
-<div class="container px-4 py-5" id="featured-3">
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-      <div class="feature col">
+<div class="container px-4 py-5 alignment" id="featured-3">
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="feature col border">
+      <div class="icon">
         <i class="fas fa-utensils"></i>
-        <a href="#" class="icon-link">
-            <h2>Menu</h2>
-        </a>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
       </div>
-      <div class="feature col">
+      <a href="{% url 'menu' %}" class="icon-link">
+        <h3>Menu</h3>
+      </a>
+      <p>Whether it's breakfast, lunch or dinner, we have your hunger covered! Locally sourced, fresh ingredients are at the heart of our dishes.</p>
+    </div>
+    <div class="feature col border">
+      <div class="icon">
         <i class="fas fa-book-open"></i>
-        <a href="#" class="icon-link">
-            <h2>Book Now</h2>
-        </a>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
       </div>
-      <div class="feature col">
+      <a href="{% url 'bookings' %}" class="icon-link">
+        <h3>Book Now</h3>
+      </a>
+      <p>We would be happy to welcome you to our restaurant, please reserve a table at Arthur &amp; Alfie's by clicking thourgh to the reservation form.</p> 
+    </div>
+    <div class="feature col border">
+      <div class="icon">
         <i class="fas fa-newspaper"></i>
-        <a href="#" class="icon-link">
-            <h2>Newsletter</h2>
-        </a>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
       </div>
-      <div class="feature col">
+      <a href="{% url 'sign_up' %}" class="icon-link">
+        <h3>Newsletter</h3>
+      </a>
+      <p>Sign up to our newsletter to get the latest restaurant news and menus sent directly to your inbox.</p>
+    </div>
+    <div class="feature col border">
+      <div class="icon">
         <i class="fas fa-blog"></i>
-        <a href="#" class="icon-link">
-            <h2>Blog</h2>
-        </a>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
       </div>
-      <div class="feature col">
+      <a href="{% url 'blog' %}" class="icon-link">
+        <h3>Blog</h3>
+      </a>
+      <p>For the latest updates and information, please see the below blogs.</p> 
+    </div>
+    <div class="feature col border">
+      <div class="icon">
         <i class="fas fa-user-plus"></i>
-        <a href="#" class="icon-link">
-            <h2>Register</h2>
-        </a>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
       </div>
-      <div class="feature col">
+      <a href="{% url 'account_signup' %}" class="icon-link">
+        <h3>Register</h3>
+      </a>
+      <p>To see future table bookings or like a blog, please register. Already have an account? Then please Log In.</p>
+    </div>
+    <div class="feature col border">
+      <div class="icon">
         <i class="fas fa-sign-in-alt"></i>
-        <a href="#" class="icon-link">
-            <h2>Log In</h2>
-        </a>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
       </div>
+      <a href="{% url 'account_login' %}" class="icon-link">
+        <h3>Log In</h3>
+      </a>
+      <p>To see future table bookings or like a blog, please sign in. If you have not created an account yet, then please Register.</p>
     </div>
   </div>
+</div>
+
+<div class="container border alignment">
+  <div class="container">
+    <div class="icon">
+      <i class="fas fa-bullhorn"></i>
+    </div>
+    <a href="{% url 'blog' %}" class="icon-link">
+      <h3>Latest News</h3>
+    </a>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      {% for blog in blogs %}
+        <div class="card bg-dark text-white col-md m-2">
+          <img src="{{blog.featured_image.url}}" class="card-img news-card" alt="food image relating to the blog post">
+          <div class="card-img-overlay">
+            <h5 class="card-title">{{blog.title}}</h5>
+            <p class="card-text">{{blog.excerpt}}</p>
+            <p class="card-text">{{blog.updated_on}}</p>
+          </div>
+        </div>
+      {% endfor %}  
+    </div>
+  </div>
+</div>
 
 {%endblock%}
+

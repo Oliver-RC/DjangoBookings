@@ -4,9 +4,7 @@
 
 <div class="title-description">
     <h2>Blog</h2>
-    <p>
-        For the latest updates and information, please see the below blogs.
-    </p> 
+    <p>For the latest updates and information, please see the below blogs.</p> 
 </div>
 
 <div class="container-fluid">
@@ -25,7 +23,7 @@
                                     <p>Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h3 class="card-title">{{ post.title }}</h3>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
