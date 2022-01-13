@@ -9,9 +9,11 @@ Bootstrap
 Coolors
 Django All Auto
 
+
 using CI Django Blog walkthrough to help build inital restaurant blog.
 Harvester menu
 django documentation
+https://www.youtube.com/watch?v=EX6Tt-ZW0so
 
 
 

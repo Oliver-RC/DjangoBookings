@@ -14,3 +14,9 @@ def reserve_table(request):
     else: reserve_form = BookingForm()
 
     return render(request, 'bookings.html', {'form': reserve_form})
+
+
+def table_reservations(request):
+    reservations = Booking.objects.all()
+
+    return render(request, 'user_bookings.html', {"reservations": reservations})

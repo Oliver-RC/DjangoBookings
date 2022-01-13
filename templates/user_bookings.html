@@ -2,8 +2,6 @@
 
 {% block content %}
 
-{% load crispy_forms_tags %}
-
 <div class="title-description">
     <h2>Table Bookings</h2>
     <p>
@@ -11,6 +9,35 @@
     </p> 
 </div>
 
+<div class="card card-body">
+    <a class="btn btn-primary  btn-sm btn-block" href="#">Book a table</a>
+    <table class="table table-sm">
+        <tr>
+            <th>Date of Booking</th>
+            <th>Time of Booking</th>
+            <th>Number of Guests</th>
+            <th>Requirements</th>
+            <th>Reserved By</th>
+            <th>Status</th>
+        </tr>
 
+        {% for booking in reservations %}
+            <tr>
+                <td>{{booking.date}}</td>
+                <td>{{booking.time}}</td>
+                <td>{{booking.number_of_guests}}</td>
+                <td>{{booking.requirements}}</td>
+                <td>{{booking.email}}</td>
+
+                <td><a class="btn btn-sm btn-info" href="#">Update Reservation</a></td>
+
+                <td><a class="btn btn-sm btn-danger" href="#">Cancel Reservation</a></td>
+
+            </tr>
+        {% endfor %}
+
+
+    </table>
+</div>
 
 {%endblock%}
