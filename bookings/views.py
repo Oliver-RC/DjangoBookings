@@ -23,14 +23,14 @@ def table_reservations(request):
     return render(request, 'user_bookings.html', {"reservations": reservations})
 
 
-# def update_reservation(request, pk):
-#     reserve = Booking.objects.get(id=pk)
-#     reserve_form = BookingForm(instance=reserve)
+def update_reservation(request, pk):
+    reserve = Booking.objects.get(id=pk)
+    reserve_form = BookingForm(instance=reserve)
 
-#     if request.method == 'POST':
-#         reserve_form = BookingForm(request.POST, instance=reserve)
-#         if reserve_form.is_valid():
-#             reserve_form.save()
-#             return redirect('/')
+    if request.method == 'POST':
+        reserve_form = BookingForm(request.POST, instance=reserve)
+        if reserve_form.is_valid():
+            reserve_form.save()
+            return redirect('/')
 
-#     return render(request, 'user_bookings.html', {'form': reserve_form})
+    return render(request, 'user_bookings.html', {'form': reserve_form})
