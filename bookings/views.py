@@ -20,7 +20,7 @@ def reserve_table(request):
 def table_reservations(request):
     reservations = Booking.objects.all()
 
-    return render(request, 'user_bookings.html', {"reservations": reservations})
+    return render(request, 'user_bookings.html', {'reservations': reservations})
 
 
 def update_reservation(request, pk):
@@ -31,6 +31,16 @@ def update_reservation(request, pk):
         reserve_form = BookingForm(request.POST, instance=reserve)
         if reserve_form.is_valid():
             reserve_form.save()
-            return redirect('/')
+            return redirect('user_bookings')
 
-    return render(request, 'user_bookings.html', {'form': reserve_form})
+    return render(request, 'bookings.html', {'form': reserve_form})
+
+
+def delete_reservation(request, pk):
+    reserve = Booking.objects.get(id=pk)
+    
+    if request.method == "POST":
+	    reserve.delete()
+	    return redirect('user_bookings')
+
+    return render(request, 'delete.html', {'reserve': reserve})
