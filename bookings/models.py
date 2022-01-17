@@ -35,14 +35,20 @@ class Booking(models.Model):
         ('21:00', '21:00'),
     )
 
+    STATUS = (
+        ('Booking awaiting restaurant confirmation', 'Booking awaiting restaurant confirmation'), 
+        ('Booking confirmed', 'Booking confirmed'),
+    )
+
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
-    phone = models.IntegerField()
+    phone = models.CharField(max_length=12)
     requirements = models.TextField(blank=True, null=True)
     table_size = models.ForeignKey(Tables, null=True, on_delete=models.SET_DEFAULT, default='2')
     date = models.DateField()
     time = models.CharField(max_length=5, choices=TIME_CHOICES, default='12:00')
+    status = models.CharField(max_length=50, choices=STATUS, default='Booking awaiting restaurant confirmation')
 
     def __str__(self):
         return self.first_name

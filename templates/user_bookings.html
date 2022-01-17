@@ -10,7 +10,7 @@
 </div>
 
 <div class="card card-body mx-5">
-    <a class="btn btn-secondary btn-sm btn-block mb-2" href="{% url 'bookings' %}">Book a Table</a>
+    <a class="btn btn-secondary btn-sm btn-block mb-4" href="{% url 'bookings' %}">Book a Table</a>
     <table class="table table-sm">
         <tr>
             <th>Date of Booking</th>
@@ -28,7 +28,7 @@
                 <td>{{booking.table_size}}</td>
                 <td>{{booking.requirements}}</td>
                 <td>{{booking.email}}</td>
-                <td>STATUS TBC</td>
+                <td>{{booking.status}}</td>
 
                 <td><a class="btn btn-sm btn-info" href="{% url 'update_bookings' booking.id %}">Update Reservation</a></td>
 
