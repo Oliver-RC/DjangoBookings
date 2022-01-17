@@ -36,7 +36,7 @@ class Booking(models.Model):
     )
 
     STATUS = (
-        ('Booking awaiting restaurant confirmation', 'Booking awaiting restaurant confirmation'), 
+        ('Booking awaiting restaurant confirmation', 'Booking awaiting restaurant confirmation'),
         ('Booking confirmed', 'Booking confirmed'),
     )
 
@@ -49,6 +49,9 @@ class Booking(models.Model):
     date = models.DateField()
     time = models.CharField(max_length=5, choices=TIME_CHOICES, default='12:00')
     status = models.CharField(max_length=50, choices=STATUS, default='Booking awaiting restaurant confirmation')
+
+    class Meta:
+        ordering = ['status']
 
     def __str__(self):
         return self.first_name
