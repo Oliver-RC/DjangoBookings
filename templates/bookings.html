@@ -8,6 +8,10 @@
     <h2>Book A Table</h2>
     <p>
         Please complete the following form to reserve a table at Arthur &amp; Alfie's.
+        <br>
+        If you are signed in when booking a table, you will be able to see your booking status on the 'My Bookings' page. You can also update or cancel your reservation.
+        <br>
+        Otherwise the restaurant will call to confirm your reservation.
     </p> 
 </div>
 
@@ -17,7 +21,7 @@
         {{ form | crispy }}
         {% csrf_token %}
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Book a Table</button>
     </form>
 </div>
 

@@ -9,10 +9,15 @@ def reserve_table(request):
     reserve_form = BookingForm(data=request.POST)
 
     if reserve_form.is_valid():
-        reserve_form.instance.user = request.user
-        reserve_form.save()
-        messages.success(request, 'Success!')
-        reserve_form = BookingForm()
+        if request.user.is_authenticated:
+            reserve_form.instance.user = request.user
+            reserve_form.save()
+            messages.success(request, 'Booking received! Please go to the "My Bookings" page to view your bookings and their status.')
+            reserve_form = BookingForm()
+        else:
+            reserve_form.save()
+            messages.success(request, 'Booking received! The restaurant will call to confirm your booking.')
+            reserve_form = BookingForm()            
     else: reserve_form = BookingForm()
 
     return render(request, 'bookings.html', {'form': reserve_form})
