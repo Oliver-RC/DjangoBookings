@@ -72,29 +72,30 @@
   </div>
 </div>
 
-<div class="container border alignment px-4 py-5">
-  <div class="container">
-    <div class="icon">
-      <i class="fas fa-bullhorn"></i>
+<div class="container alignment px-4 py-5">
+  <div class="row border">
+    <div class="container">
+      <div class="icon">
+        <i class="fas fa-bullhorn"></i>
+      </div>
+      <a href="{% url 'blog' %}" class="icon-link">
+        <h3>Latest News</h3>
+      </a>
     </div>
-    <a href="{% url 'blog' %}" class="icon-link">
-      <h3>Latest News</h3>
-    </a>
-  </div>
-
-  <div class="container">
-    <div class="row g-0">
-      {% for blog in blogs %}
-        <div class="card bg-dark text-white col-lg m-1">
-          <img src="{{blog.featured_image.url}}" class="card-img news-card" alt="food image relating to the blog post">
-          <div class="card-img-overlay">
-            <h5 class="card-title">{{blog.title}}</h5>
-            <p class="card-text">{{blog.excerpt}}</p>
-            <p class="card-text">{{blog.updated_on}}</p>
+    <div class="container">
+      <div class="row g-0">
+        {% for blog in blogs %}
+          <div class="card bg-dark text-white col-lg m-2">
+            <img src="{{blog.featured_image.url}}" class="card-img news-card" alt="food image relating to the blog post">
+            <div class="card-img-overlay">
+              <h5 class="card-title">{{blog.title}}</h5>
+              <p class="card-text">{{blog.excerpt}}</p>
+              <p class="card-text">{{blog.updated_on}}</p>
+            </div>
           </div>
-        </div>
-      {% endfor %}
-    </div>
+        {% endfor %}
+      </div>
+    </div>    
   </div>
 </div>
 
