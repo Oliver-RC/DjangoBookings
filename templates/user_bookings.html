@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<!-- Page Title -->
 <div class="title-description">
     <h2>Table Bookings</h2>
     <p>
@@ -9,6 +10,7 @@
     </p> 
 </div>
 
+<!-- User Booking Table -->
 <div class="card card-body mx-5">
     <a class="btn btn-secondary btn-sm btn-block mb-4" href="{% url 'bookings' %}">Book a Table</a>
     <table class="table table-sm">
@@ -36,7 +38,6 @@
 
             </tr>
         {% endfor %}
-
 
     </table>
 </div>
