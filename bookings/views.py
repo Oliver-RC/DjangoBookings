@@ -39,7 +39,7 @@ def update_reservation(request, pk):
 
 def delete_reservation(request, pk):
     reserve = Booking.objects.get(id=pk)
-    
+
     if request.method == "POST":
 	    reserve.delete()
 	    return redirect('user_bookings')
