@@ -9,6 +9,7 @@ def reserve_table(request):
     reserve_form = BookingForm(data=request.POST)
 
     if reserve_form.is_valid():
+        reserve_form.instance.user = request.user
         reserve_form.save()
         messages.success(request, 'Success!')
         reserve_form = BookingForm()
@@ -18,7 +19,7 @@ def reserve_table(request):
 
 
 def table_reservations(request):
-    reservations = Booking.objects.all()
+    reservations = Booking.objects.filter(user=request.user)
 
     return render(request, 'user_bookings.html', {'reservations': reservations})
 

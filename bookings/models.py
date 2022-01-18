@@ -49,6 +49,7 @@ class Booking(models.Model):
     date = models.DateField()
     time = models.CharField(max_length=5, choices=TIME_CHOICES, default='12:00')
     status = models.CharField(max_length=50, choices=STATUS, default='Booking awaiting restaurant confirmation')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     class Meta:
         ordering = ['status']
