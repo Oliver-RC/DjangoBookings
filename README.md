@@ -1,18 +1,6 @@
-heroku
-postgreSQL
-cloudinary
-udemy
-pexels
-google fonts - Lilita One (TITLE) and PT Sans Narrow (Body)
-Font Awesome
-Bootstrap
-Django All Auto
-Google Maps API
-
-
+Django All Auto documentation
 using CI Django Blog walkthrough to help build inital restaurant blog.
 Harvester menu
-django documentation
 https://www.youtube.com/watch?v=EX6Tt-ZW0so
 
 
@@ -210,49 +198,76 @@ A deployed link to the website can be found [here](#)
  - The carousel images all have an alt attribute taking into account users who are visually impaired. The site has contrasting background colours to text enabling an easy read. Background button colours have been set to match the relevant pages defined colour. Semantic HTML has been used to support machines to understand the layout of the site. All links have hover over effect.
  
 ## Features Left to Implement
- - Admin database functionality on Bookings app:
-   - 
- - Bookings database model development logic is to be improve in order to better assist the users and restaurant admins functionality. 
- - My Bookings user functionality
- - Customer account information shown and editable
- - Improve authentication process by introducting forgotten password reset
- - Unsubscribe from newsletter sign up via email link
+ - Database functionality on Bookings app:
+   - Restrict dates available for the customer, maximum 3 month future bookings.
+   - Automated unavailable dates for customers once the maximum number of bookings have been hit.
+   - email confirmation sent to the customer once the status of the booking has been updated by the restaurant.
+ - Create a customer account page which shows the user their account information, is editable and can be deleted. Also advises if they are signed up to the newsletter subscriptions.
+ - Improve user authentication process by introducting forgotten password reset.
+ - Newsletter subscription email content to be built into the database allowing the restaurant admin to draft, post and delete content. Once posted the email is sent to the subscribed users.
 
 ## Technologies Used
 
  ### Languages Used
+  - [Django](https://en.wikipedia.org/wiki/Django_(web_framework))
+  - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
   - [HTML](https://en.wikipedia.org/wiki/HTML5)
   - [CSS](https://en.wikipedia.org/wiki/CSS)
   - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
  ### Frameworks, Libraries & Programs Used
+  - Django: the framework used to build the project and apps.
+  - Heroku: used to deploy my project and incorporate their postgreSQL resource.
+  - Cloudinary: used to store my database images.
+  - Bootstrap: used to support the frontend design and responsive layout of the site. Key components used to improve the UX of the site.
+  - Google Inspect: used to amend and fix display issues along with reviewing responsive break points on each pages content.
   - Balsamiq: used to create the wireframe during the design process.
+  - Mockup design: used to create my responsive design file.
   - Gitpod: used for writing the code and using the command line to commit and push to GitHub.
   - Git: used for version control through the gitpod terminal to commit to Git and push to GitHub.
   - GitHub: used to store the projects code after being pushed from Git. Used to host repository.
-  - Hover.css: used for the links in the nav bar to underline, bold and turn background colour a lighter green. Used to reverse the background colour, font colour and bold the text in the buttons. The curser turns to a hand icon when hovered over link / clickable button.
-  - Google Fonts: used to import the 'Bree Serif' font with 'Serif' as the fallback font for the headings and 'Open Sans' font with 'Sans-Serif' as the fallback font for the content of the site.
-  - Font Awesome: used for icons in the header, footer and icons within the content of the site for aesthetic and UX purposes.
-  - Favicon.io: used to generate the favicon icon of the site.
+  - Google Fonts: used to import the 'Lilita One' font with 'Cursive' as the fallback font for the headings and 'PT Sans Narrow' font with 'Sans-Serif' as the fallback font for the content of the site.
+  - Google Maps API: used to assign an API to my project for google maps and thus allowing an iframe of the map on my home page.
+  - Font Awesome: used for icons in the home page detail navigation section and footer social media links. Needed for site aesthetic and UX purposes.
+  - Coloors: used to select the sites colour palette.
+  - Pexels: used for blog and meal specific images.
+  - Unsplash: used for blog and meal specific images.
 
 ## Testing
- - I tested the sites interactive content to make sure the functionality worked as intended. In summary:
-   - the reward input allowed the typed task to be added to the table with either an enter press or click on 'add' button. 
-   - the stars in the chart are clickable to remove the opacity. 
-   - the stars achieved counter totals the number of clicked stars.
-   - the content of the table remains even when the browser is refreshed or the user comes back to the site.
-   - the end of the week reset button removes the chart tables content.
-   - playing the game delivers the expected result and are correct.
-   - the game score counter tallys correctly and the stars earned counter calculates correctly.
-   - the game instructions alert box appears when clicked on.
-   - the 'claim reward' buttons bring up an expected alert when clicked on.
-   - the feedback form submits correctly with the 'required' propoerty used where needed.
-   - all the links work i.e. nav links take the user to the correct page, header logo clicks back through to the home page, footer social media icons open up the site in a new tab.
-   - the link hovers work as intended and show the correct styling when cursor over.
-   - the pages are responsive and look as intended based on the screen size, with mobile, tablet and desktop the main breakpoints.
-   - I asked three family members to test out the site too by sending them the url link and provide honest feedback where possible.
+ - I used a combination of manual and automated testing to ensure the application works as intended and meets the users demands.
+
+ ### Manual Testing
+  - Myself and two other family members tested the application. We used a checklist to check all pages loaded correctly with the content expected, the interactive elements worked as intended i.e. buttons, links etc, the forms submitted, authentication worked. In summary:
+    - All links on the site tested and directed to the correct page.
+    - 
+  - The devices used to test the application on were:
+    - Samsung Note 10
+    - Samsung S7
+    - iphone 10
+    - iphone SE
+    - Asus 13" laptop
+    - Microsoft Surface
+    - iPad Mini
+  - The operating systems and browsers used to test the application on were:
+    - Microsoft operating system
+    - iOS operating system
+    - Google Chrome
+    - Microsoft Edge
+    - Firefox
+    - Safari
+ 
+ ### Automated Testing
+  - A
+
+ ### User Stories Testing
+  - First time user once on the site is able to understand the reasoning  of the site by the site heading but also the following content of the first page with clear section titles. The page reads from top to bottom with the task section and reward chart being the main content. Page links towards the bottom aid the journey of the user onto the next pages.
+  - Returning user is able to interact with the site as intended with the reward table tasks saved to local storage. The game page restarting when returning and the footer icon links enabling the user to search for further content offsite.
+  - Frequent user is able to reset the saved tasks and start afresh by clicking on the end of week reset button. The site is clearly structured and encompasses all the required elements to treat the site as the main reward system for the parent / carer. 
+
  ### Google Inspect
-  - I coded the site using mobile first design. Constantly using Google Inspect in the devtools to check my layout, make amendments, re-check and therefore delivering an end result that fits the brief and user goals. 
- ### Validator Testing
+  - Constantly using Google Inspect in the devtools to check my layout, make amendments, re-check and therefore delivering an end result that fits the brief and user goals. A mobile first design approach with the help of Bootstrap grid system. 
+ 
+ ### Code Validator Testing
+  
   #### HTML - 
    - All HTML validation was passed through the official W3C validator.
    - index.html returned with two errors, I had duplicated id="star" more than once for the repeat of the star icons in the table. Corrected to number the star ids element. On line 158, I did not include a space between href and class tags, corrected.
@@ -263,28 +278,30 @@ A deployed link to the website can be found [here](#)
    ![Reward Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/reward-validator.JPG)
    - feedback.html had two errors on line 60 and 63 whereby I did not include a space between placeholder and required tags, both corrected.
    ![Feedback Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/feedback-validator.JPG)
+  
   #### CSS - 
    - No errors were found when passing through the official (Jigsaw) validator.
    ![CSS Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/css-validator.JPG)
    - Two warnings were displayed, one due to using external style sheet for Google Fonts, one for an unknown vendor extension which I have created to help with the background colour maintenance of the site.
    ![CSS Validator Warnings](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/css-warning-validator.JPG)
+  
   #### JavaScript - 
    - JS Hint Checker was used to highlight any functional errors, none returned. The only warning was regarding semicolons being missing on selected lines. Upon research, this is optional. Nevertheless I felt best practice to use semicolons so corrected both script.js and gsame.js files.
+
+  #### Python - 
+   - PEP8 
+ 
  ### Performance Testing
-  - Tested the site on Google Developer Tools Lighthouse for desktop and mobile with good results on both. Performance, accessibility and SEO scored top marks. Best practices at 87 due to browser 404 errors but nothing of concern which impacts the site useability and performance.
-  ![Lighthouse Results Desktop](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/accessibility-desktop.JPG)
-  ![Lighthouse Results Mobile](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/accessibility-mobile.JPG)
-  - Tested on [Wave](https://wave.webaim.org/) which helped me with accessibility, making sure my layout and design worked well with screen readers.
- ### User Stories Testing
-  - First time user once on the site is able to understand the reasoning  of the site by the site heading but also the following content of the first page with clear section titles. The page reads from top to bottom with the task section and reward chart being the main content. Page links towards the bottom aid the journey of the user onto the next pages.
-  - Returning user is able to interact with the site as intended with the reward table tasks saved to local storage. The game page restarting when returning and the footer icon links enabling the user to search for further content offsite.
-  - Frequent user is able to reset the saved tasks and start afresh by clicking on the end of week reset button. The site is clearly structured and encompasses all the required elements to treat the site as the main reward system for the parent / carer. 
-  ### Further Testing
-  - Site tested on Google Chrome, Microsoft Edge, Firefox and Safari across the responsive page break points with CSS Flexbox working as intended on each page.
-  - The site tested on the above browsers but also using the browsers on different operating systems, Microsoft and Apple. This was to check for all links, site elements, screen layout and functionality working as intended. 
-  - The site was also tested on mobile, both Samsung Note 10 and iphone 10. Again using Google Chrome on both devices, Safari on Apple and Samsung Internet Browser.
-  - All links on the site tested and directed to the correct page.
-  ### Bugs
+
+  #### Lighthouse - 
+   - Tested the site on Google Developer Tools Lighthouse for desktop and mobile with good results on both. Performance, accessibility and SEO scored top marks. Best practices at 87 due to browser 404 errors but nothing of concern which impacts the site useability and performance.
+   ![Lighthouse Results Desktop](#)
+   ![Lighthouse Results Mobile](#)
+  
+  #### Wave - 
+   - Tested on [Wave](https://wave.webaim.org/) which helped me with accessibility, making sure my layout and design worked well with screen readers.
+ 
+ ### Bugs
   - The reward chart table width when applying margins left and right would cause the table to overflow the page. Corrected by setting the width to 100%.
   - Issues with the footer not remaining at the bottom of the index and feedback page as the content of the body was not long enough. Resolved by extending the margin on the elements above to push footer to the bottom. Position absolute would cause the footer to sit ontop of the above elements and position fixed would also stick the footer above elements on the page.
 
@@ -309,6 +326,8 @@ A deployed link to the website can be found [here](#)
    - Press enter to create your local clone.
  ### Updates and Push to Hosting
    - Any updates to the code will need to be commited and pushed to the master branch. This will automatically update the hosted site.
+ ### Heroku
+   - A
 
 ## Credits
 
@@ -346,4 +365,4 @@ A deployed link to the website can be found [here](#)
   - Brian Macharia - Mentor support. A thank you for your guidance throughout the project.
   - Code Institue Slack Community - A great resource and helpful community supported me through the challenges encountered.
 
-**This project is for educational use only and was created for the Code Institue Portfolio Project 2: JavaScript Essentials**
+**This project is for educational use only and was created for the Code Institue Portfolio Project 4: Full-Stack Toolkit**
