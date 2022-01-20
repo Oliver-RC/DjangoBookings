@@ -7,6 +7,7 @@ google fonts - Lilita One (TITLE) and PT Sans Narrow (Body)
 Font Awesome
 Bootstrap
 Django All Auto
+Google Maps API
 
 
 using CI Django Blog walkthrough to help build inital restaurant blog.
@@ -19,7 +20,7 @@ https://www.youtube.com/watch?v=EX6Tt-ZW0so
 
 # Arthur &amp; Alfie's Restaurant
 
-Arthur %amp; Alfie's is website built to showcase their restaurant, allowing a wider target audience to discover whats on offer. There is a page showcasing their menu and lastest blog articles. Furthermore users can register up to the site and log in to their account allowing them to 'like' blogs by the restaurant, providing the owners with subtle feedback on which blogs are the most popular. Users can book a table reservation and even sign up to their newsletter email subscription. Whilst signed in, the user is able to see their future table booking and has the functionality to edit, cancel or add.
+Arthur & Alfie's is website built to showcase their restaurant, allowing a wider target audience to discover whats on offer. There is a page showcasing their menu and lastest blog articles. Furthermore users can register up to the site and log in to their account allowing them to 'like' blogs by the restaurant, providing the owners with subtle feedback on which blogs are the most popular. Users can book a table reservation and even sign up to their newsletter email subscription. Whilst signed in, the user is able to see their future table booking and has the functionality to edit, cancel or add.
 
 This is a full-stack project built using Python + Django, HTML, CSS and JavaScript and is for educational purposes. 
 
@@ -82,12 +83,13 @@ A deployed link to the website can be found [here](#)
   - The site is made up of an initial home page, menu page, book now page, newsletter page, blog page, register page, log in page and my bookings page for logged in users.
   - Each page only has the relevant content expected in order to keep the site simple to understand. Every page is in a consistant style, format and layout aiding usability.
   - Bootstrap grid layout system has been used to create a responsive site.
+  - Layout design of each page:
     1. Navigation bar at the top with page title to the left and page links to the right.
     2. Rotational uber image under the navigation bar for inspiriation and reaffirming to the user it is a restaurant site.
     3. Title of the page and paragraph of text advising the user of the page and its use.
     4. Core content of the page.
-    3. Social media footer at the bottom.
-    4. Consistant colour scheme throughout each page specifically on the header / nav bar, page link buttons and footer.
+    5. Social media footer at the bottom.
+    6. Consistant colour scheme throughout each page specifically on the header / nav bar, page link buttons and footer.
  
  ### Colour Scheme
   - Colour scheme of the site designed using: https://coolors.co/
@@ -123,28 +125,33 @@ A deployed link to the website can be found [here](#)
 ## Current Features
 
  ### Navigation Bar
- - A responsive navigation bar featured on all pages of the site.
- - This section allows the user to easily navigate from page to page without having to use the back button or relooping back to the homepage.
+ - A responsive navigation bar featured on all pages of the site. As the width exceeds 992px the burger menu is replaced with the title of the pages. As you hover over the page links, the text colour brightens.
+ - This section allows the user to easily navigate from page to page without having to use the back button or relooping back to the home page.
+ - If the user is logged in, the 'register' and 'log in' pages will revert to 'my bookings' and 'log out'. The 'my bookings' page is restricted so that only logged in users can see. Likewise when 'log in' chnages to 'log out', this is a clear indication to the user of their status (signed in or out).
  
  ![Nav Bar](#)
  
  ### Carousel and Opening Paragraph
- - A 
+ - A carousel image section provides the user with inspirational and relevant content to the reason of the site. The carousel rotates through three images which keeps the user interested and on the site for longer. 
+ - Supporting the image carousel is a page header below with supporting text. This is crucial as it informs the user about which page they are on and the reason for the page.
 
  ![Opening Content](#)
 
  ### Detail Navigation
- - A 
+ - An additional navigation section has been built into the home page which supports those users who require further information about the features and pages of the site without having to navigation to every page.
+ - A title when clicked on navigates to the relevatn page, with an underline hover effect. Each page is supported with a relevant icon, again a further reference point, for those users who prefer or need visual hints.
 
  ![Detail Nav](#)
 
  ### Latest News
- - A 
+ - A snapshot of the blogs that have been posted by the restaurant. The users first landing on the page will get a feel for the type of blog / news content come out from the restaurant without having to navigate to the blog page specifically.
+ - This data is stored in the database and is updated when the restaurant admin post a new blog article. 
 
  ![Latest News](#)
 
  ### Opening Hours and Directions
- - A 
+ - The final piece of information you would expect from a restaurant site, opening and closing hours along with directions to the restaurant.
+ - Google Maps API has been used to generate the iframe map. The user can interact with the map and click to open a new tab to take them directly to Google Maps.
 
  ![Hours and Directions](#)
  
@@ -156,46 +163,60 @@ A deployed link to the website can be found [here](#)
  ![Footer](#)
  
  ### Menu Page
- - A 
+ - A Bootstrap accordion component houses all the menu information for the user. The menu categories make up the clickable expand sections which allows the user to only open up the category of food they are interested in. The category heading is also collapsable.
+ - Restaurant Admin manage the data shown here to the user. All changes made to both categories or meals will be automatically shown within the accordion.
+ - The meal 'view details' button, when clicked on will take the user to the meal detail page showing more information on that specific meal.
 
  ![Menu](#)
 
  ### Book Now Page
- - A 
+ - The Book Now page consists of a form that the user will fill in and submit to the restaurant. Once submitted a message will appear advising the user of the table booking submission and how the restaurant will contact you to confirm, be it via phone if not a signed in user, or via 'My Booking' page, reservation status field.
+ - If the user misses a required field the form will advise the user that details are needed and only once the form has been completed, will it get submitted to the restaurant.
 
  ![Book Now](#)
 
  ### Newsletter Page
- - A 
+ - On the Newsletter page a form is presented and once fully completed and submitted will sign up the provided email address to the restaurants newsletter subscription.
+ - An email will be sent to the address provided by the user to confirm their sign up.
 
  ![Newsletter](#)
 
  ### Blog Page
- - A 
+ - Restaurant posted blogs are shown to users on the Blog page. Every blog is shown on an individual card with a supporting image, author of the blog from the restaurant, the date of the post, how many likes and a small exert on the content. 
+ - Each blog title and exert can be clicked on to take the user to the blog detail page. 
+ - If the user is logged in then they will be able to 'like' the blog post on the detail page. This gives the restaurant owners good feedback about which news blogs are liked and those that are not. This in turn will help the restaurant to know what their target audience are interested in hearing about.
 
  ![Blog](#)
 
  ### Register, Log In / Out Pages
- - A 
+ - If users create an account it allows them to 'like' blog posts and also gives them additional functionality regarding their table bookings. On all pages, a message will show providing the user with feedback on their actions.
+ - The register page presents a form to the user to complete to sign up.
+ - The log in page asks for the username and password of the account so the user can sign in and interact with the blogs and future bookings.
+ - The log out page allows the user to log out of the site.
 
  ![Register and Log In / Out](#)
 
  ### My Bookings Page
- - A 
+ - The 'My Bookings' page will show the signed in user, only their bookings made via the 'Book Now' form. 
+ - Bookings submitted on the 'Book Now' form when signed in will appear in a table allowing the user to edit or delete their bookings.
+ - There is a button to 'Book a Table' for user to navigate to the booking form page allowing ease of navigation for all things bookings.
+ - The details of each booking is shown in a table format, more importantly for the user, they will see the status of the booking, and whether its been confirmed by the restaurant.
 
  ![Bookings](#)
  
  ### Responsive Site
- - The site is responsive across various screen sizes from desktop, tablet and through to mobile. The user needs to be able to easily read, navigate and interact with the content across various devices.
- - Specific screen break points are: iphone 5 up to ipad (320px - 767px), ipad up to ipad Pro (768px - 1023px), ipad Pro to desktop (1024px +).
- - The use of Flexbox CSS helped create a responsive site.
+ - The site uses Bootstraps grid layout system to create a responsive site across the various screen sizes. It is a mobile first flexbox grid. Where content flexes it will span down the screen without compromise to the content.
  ### Accessibility
- - All images have an alt attribute taking into account users who are visually impaired. The site has contrasting background colours to text enabling an easy read. Background button colours have been set to match the relevant pages defined colour. Semantic HTML has been used to support machines to understand the layout of the site. All links have hover over effect.
+ - The carousel images all have an alt attribute taking into account users who are visually impaired. The site has contrasting background colours to text enabling an easy read. Background button colours have been set to match the relevant pages defined colour. Semantic HTML has been used to support machines to understand the layout of the site. All links have hover over effect.
  
 ## Features Left to Implement
- - Stars achieved from the reward chart tasks are to be represented on the games page. If the user succeeds in acheiving more stars from playing the game then the reward chart stars and the game stars are to be totalled together.
- - The totalled stars to be represented on the 'My Reward' page. From this total, once a reward is claimed, the cost of the reward is to be deducted from the total stars. This will bring together the links between the chart page, game page and reward page.
- - On the reward chart, to include a delete button removing a single task.
+ - Admin database functionality on Bookings app:
+   - 
+ - Bookings database model development logic is to be improve in order to better assist the users and restaurant admins functionality. 
+ - My Bookings user functionality
+ - Customer account information shown and editable
+ - Improve authentication process by introducting forgotten password reset
+ - Unsubscribe from newsletter sign up via email link
 
 ## Technologies Used
 
