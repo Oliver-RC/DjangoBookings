@@ -6,7 +6,7 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = '__all__'
-        exclude = ('status', 'user',)
+        exclude = ['status', 'user',]
         widgets = {
             'first_name': forms.TextInput(attrs={'placeholder': 'please enter your first name'}),
             'last_name': forms.TextInput(attrs={'placeholder': 'please enter your last name'}),
