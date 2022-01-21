@@ -158,9 +158,11 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
 
  ### Newsletter Page
  - On the Newsletter page a form is presented and once fully completed and submitted will sign up the provided email address to the restaurants newsletter subscription.
- - An email will be sent to the address provided by the user to confirm their sign up.
 
- ![Newsletter](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/newsletter.JPG)
+ ![Newsletter](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/newsletter.JPG) 
+
+ - An email will be sent to the address provided by the user to confirm their sign up.
+ 
  ![Email](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/email.JPG)
 
  ### Blog Page
@@ -242,9 +244,12 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
   ![Manual Test Checklist](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-checklist.JPG)
   [Manual Test Link](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/manual-testing-checklist.xlsx)
   - Examples of manual testing:
-  ![Booking form valid submission error checked](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-1.JPG)
-  ![Booking form valid form submitted message confirming](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-2.JPG)
-  ![My Bookings page, delete a booking with secondary ask](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-3.JPG)
+   - Booking form valid submission error checked:
+   ![Booking form valid submission error checked](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-1.JPG)
+   - Booking form valid form submitted message confirming:
+   ![Booking form valid form submitted message confirming](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-2.JPG)
+   - My Bookings page, delete a booking with secondary ask:
+   ![My Bookings page, delete a booking with secondary ask](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-3.JPG)
   - The devices used to test the application on were:
     - Samsung Note 10
     - Samsung S7
@@ -291,8 +296,10 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
 
   #### Lighthouse - 
    - Tested the site on Google Developer Tools Lighthouse for desktop and mobile with good results on both. Performance, accessibility and SEO scored top marks. Best practices at 87 due to browser errors but nothing of concern which impacts the site useability and performance. On mobile, performance dropped to 87 due to image size. I have reformatted and reduced pixel sizes without compromising on desktop performance.
-   ![Lighthouse Results Desktop](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-desktop.JPG)
-   ![Lighthouse Results Mobile](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-mobile.JPG)
+    - Destop:
+    ![Lighthouse Results Desktop](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-desktop.JPG)
+    - Mobile:
+    ![Lighthouse Results Mobile](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-mobile.JPG)
   
   #### Wave - 
    - Tested on [Wave](https://wave.webaim.org/) which helped me with accessibility, making sure my layout and design worked well with screen readers. No errors detected or contrast errors.
