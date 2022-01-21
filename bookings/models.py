@@ -11,7 +11,8 @@ class Tables(models.Model):
         ('10+', '10+'),
     )
 
-    table_size = models.CharField(max_length=200, null=True, choices=TABLE_CHOICES, default='2')
+    table_size = models.CharField(
+        max_length=200, null=True, choices=TABLE_CHOICES, default='2')
 
     class Meta:
         verbose_name = "table"
@@ -36,7 +37,8 @@ class Booking(models.Model):
     )
 
     STATUS = (
-        ('Booking awaiting restaurant confirmation', 'Booking awaiting restaurant confirmation'),
+        ('Booking awaiting restaurant confirmation',
+         'Booking awaiting restaurant confirmation'),
         ('Booking confirmed', 'Booking confirmed'),
     )
 
@@ -45,10 +47,14 @@ class Booking(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=12)
     requirements = models.TextField(blank=True, null=True)
-    table_size = models.ForeignKey(Tables, null=True, on_delete=models.SET_DEFAULT, default='2')
+    table_size = models.ForeignKey(
+        Tables, null=True, on_delete=models.SET_DEFAULT, default='2')
     date = models.DateField()
-    time = models.CharField(max_length=5, choices=TIME_CHOICES, default='12:00')
-    status = models.CharField(max_length=50, choices=STATUS, default='Booking awaiting restaurant confirmation')
+    time = models.CharField(
+        max_length=5, choices=TIME_CHOICES, default='12:00')
+    status = models.CharField(
+        max_length=50, choices=STATUS,
+        default='Booking awaiting restaurant confirmation')
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     class Meta:

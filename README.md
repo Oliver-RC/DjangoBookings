@@ -276,40 +276,31 @@ A deployed link to the website can be found [here](#)
   
   #### HTML - 
    - All HTML validation was passed through the official W3C validator.
-   - index.html returned with two errors, I had duplicated id="star" more than once for the repeat of the star icons in the table. Corrected to number the star ids element. On line 158, I did not include a space between href and class tags, corrected.
-   ![Home Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/index-validator.JPG)
-   - game.html had one error on line 108 whereby I did not include a space between href and class tags, corrected.
-   ![Game Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/game-validator.JPG)
-   - reward.html returned no errors.
-   ![Reward Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/reward-validator.JPG)
-   - feedback.html had two errors on line 60 and 63 whereby I did not include a space between placeholder and required tags, both corrected.
-   ![Feedback Page Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/feedback-validator.JPG)
+   ![HTML Validation](#)
   
   #### CSS - 
    - No errors were found when passing through the official (Jigsaw) validator.
-   ![CSS Validator Results](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/css-validator.JPG)
-   - Two warnings were displayed, one due to using external style sheet for Google Fonts, one for an unknown vendor extension which I have created to help with the background colour maintenance of the site.
-   ![CSS Validator Warnings](https://github.com/Oliver-RC/reward-chart/blob/main/readme-content/css-warning-validator.JPG)
+   ![CSS Validation](#)
   
   #### JavaScript - 
-   - JS Hint Checker was used to highlight any functional errors, none returned. The only warning was regarding semicolons being missing on selected lines. Upon research, this is optional. Nevertheless I felt best practice to use semicolons so corrected both script.js and gsame.js files.
+   - JS Hint Checker was used to highlight any functional errors, none returned. Warning about using 'let', with it being avaialble in ES6, however I am happy with my Javascript code functioning as intended.
 
   #### Python - 
-   - PEP8 
+   - PEP8 online check used to check all my python code written in the app. I can confirm all code meets the PEP8 standard and checked through the online tool. I had to remove whitespace from a number of files along with the line of code being too long. 
  
  ### Performance Testing
 
   #### Lighthouse - 
-   - Tested the site on Google Developer Tools Lighthouse for desktop and mobile with good results on both. Performance, accessibility and SEO scored top marks. Best practices at 87 due to browser 404 errors but nothing of concern which impacts the site useability and performance.
+   - Tested the site on Google Developer Tools Lighthouse for desktop and mobile with good results on both. Performance, accessibility and SEO scored top marks. Best practices at 87 due to browser errors but nothing of concern which impacts the site useability and performance. On mobile, performance dropped to 87 due to image size. I have reformatted and reduced pixel sizes without compromising on desktop performance.
    ![Lighthouse Results Desktop](#)
    ![Lighthouse Results Mobile](#)
   
   #### Wave - 
-   - Tested on [Wave](https://wave.webaim.org/) which helped me with accessibility, making sure my layout and design worked well with screen readers.
+   - Tested on [Wave](https://wave.webaim.org/) which helped me with accessibility, making sure my layout and design worked well with screen readers. No errors detected or contrast errors.
+   ![Wave](#)
  
  ### Bugs
-  - The reward chart table width when applying margins left and right would cause the table to overflow the page. Corrected by setting the width to 100%.
-  - Issues with the footer not remaining at the bottom of the index and feedback page as the content of the body was not long enough. Resolved by extending the margin on the elements above to push footer to the bottom. Position absolute would cause the footer to sit ontop of the above elements and position fixed would also stick the footer above elements on the page.
+  - The 
 
 ## Deployment
 

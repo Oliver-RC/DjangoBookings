@@ -12,11 +12,11 @@ def sign_up(request):
         form = NewsletterSignUp(request.POST)
         if form.is_valid():
             subject = "Arthur & Alfie's Newsletter Sign Up"
-            message = 'Thank You for signing up to our montly newsletter. Sign Up Successful.'
+            message = 'Thank You for signing up to our montly newsletter.'
             recipient = form.cleaned_data.get('email')
             form.save()
-            send_mail(subject, 
-              message, settings.EMAIL_HOST_USER, [recipient], fail_silently=False)
+            send_mail(subject, message, settings.EMAIL_HOST_USER, [recipient],
+                      fail_silently=False)
             messages.success(request, 'Success!')
             return redirect('sign_up')
     return render(request, 'newsletter.html', {'form': form})

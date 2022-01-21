@@ -7,7 +7,9 @@ class NewsletterSignUp(forms.ModelForm):
         model = Newsletter
         fields = '__all__'
         widgets = {
-            'first_name': forms.TextInput(attrs={'placeholder': 'please enter your first name'}),
-            'last_name': forms.TextInput(attrs={'placeholder': 'please enter your last name'}),
+            'first_name': forms.TextInput(
+                attrs={'placeholder': 'please enter your first name'}),
+            'last_name': forms.TextInput(
+                attrs={'placeholder': 'please enter your last name'}),
             'email': forms.EmailInput(attrs={'placeholder': 'name@email.com'}),
         }

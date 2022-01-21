@@ -12,13 +12,17 @@ def reserve_table(request):
         if request.user.is_authenticated:
             reserve_form.instance.user = request.user
             reserve_form.save()
-            messages.success(request, 'Booking received! Please go to the "My Bookings" page to view your bookings and their status.')
+            messages.success(request, 'Booking received!'
+                             ' Please go to the "My Bookings"'
+                             ' page to view your bookings and their status.')
             reserve_form = BookingForm()
         else:
             reserve_form.save()
-            messages.success(request, 'Booking received! The restaurant will call to confirm your booking.')
+            messages.success(request, 'Booking received! The restaurant will'
+                             'call to confirm your booking.')
             reserve_form = BookingForm()
-    else: reserve_form = BookingForm()
+    else:
+        reserve_form = BookingForm()
 
     return render(request, 'bookings.html', {'form': reserve_form})
 
@@ -26,7 +30,8 @@ def reserve_table(request):
 def table_reservations(request):
     reservations = Booking.objects.filter(user=request.user)
 
-    return render(request, 'user_bookings.html', {'reservations': reservations})
+    return render(request, 'user_bookings.html',
+                  {'reservations': reservations})
 
 
 def update_reservation(request, pk):
@@ -46,7 +51,7 @@ def delete_reservation(request, pk):
     reserve = Booking.objects.get(id=pk)
 
     if request.method == "POST":
-	    reserve.delete()
-	    return redirect('user_bookings')
+        reserve.delete()
+        return redirect('user_bookings')
 
     return render(request, 'delete.html', {'reserve': reserve})
