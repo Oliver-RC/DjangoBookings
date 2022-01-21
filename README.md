@@ -101,7 +101,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
 ## Wireframe
  - Following the initial user stories, design and features. I mocked up the wireframe of the site to incorporate all must have pages and features. 
  - I used a desktop approach for this as it would be the largest screen size to make the content work. Bootstrap grid system helps to flex the content to mobile, so I felt it woudl be benefical to design using the most challenging screen size for the project, larger desktop.
-   - [Wireframe](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/arthur-alfies-restaurant.png)
+   - [Wireframe Link](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/arthur-alfies-restaurant.png)
 
 ## Current Features
 
@@ -296,10 +296,10 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
 
   #### Lighthouse - 
    - Tested the site on Google Developer Tools Lighthouse for desktop and mobile with good results on both. Performance, accessibility and SEO scored top marks. Best practices at 87 due to browser errors but nothing of concern which impacts the site useability and performance. On mobile, performance dropped to 87 due to image size. I have reformatted and reduced pixel sizes without compromising on desktop performance.
-    - Destop:
-    ![Lighthouse Results Desktop](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-desktop.JPG)
-    - Mobile:
-    ![Lighthouse Results Mobile](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-mobile.JPG)
+     - Destop:
+     ![Lighthouse Results Desktop](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-desktop.JPG)
+     - Mobile:
+     ![Lighthouse Results Mobile](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-mobile.JPG)
   
   #### Wave - 
    - Tested on [Wave](https://wave.webaim.org/) which helped me with accessibility, making sure my layout and design worked well with screen readers. No errors detected or contrast errors.
@@ -308,9 +308,10 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
  ### Bugs and Fixes
   - When I initially deployed the app to Heroku, the main carousel images in the base.html file did not load nor did many css properties. I had to remove the image files stored in the static folder and upload to cloudinary, then amend the image source link.
   - When reviewing the site content, the images of both the blog detail page and meal detail page would shrink the image to fit. I have changed the viewport height in order to show the images correctly.
-  - In the 'My Bookings' page, when using a small screen, the user does have to scroll right to see all the boking details. I have reduced the size of the table however I have not been able to completely change the layout to display vertically. A further fix is needed to improve UX on this page.
+  - In the 'My Bookings' page, when using a small screen, the user does have to scroll right to see all the boking details. I have reduced the size of the table however I have not been able to completely change the layout to display vertically. I have used Bootstraps responsive class however, a further fix is needed to improve the UX on this page.
   - Part way through the development when migrating a new model change, it encountered an integrity error. This resulted in having to dumpdata from the other models and saving the information in a json file. I have kept the json data files in the app for safe keeping. 
   - On the home page, latest news feed, the tiles overspill making them look off center on smaller devices. I beleive this is a bug as I have tried, max-width, viewport width without any success.
+  - The menu page accordion, should normally be displayed open, so the blue hover colour is displayed, however I wanted the accordion to be closed when the page opened so the user could see the menu categories. There is a bug that will not allow me to change the blue hover. A further fix is required to improve the UX.
 
 ## Deployment
  - I used Github to manage the development stages, pushing my updated files to the main branch of the repository. It is the Github main branch that has been used to deploy the app through Heroku. Steps below show the process in the deployment stages.
