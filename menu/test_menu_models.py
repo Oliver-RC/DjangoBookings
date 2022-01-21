@@ -5,7 +5,9 @@ from .models import Menu, Category
 class TestModels(TestCase):
 
     def setUp(self):
-        Menu.objects.create(meal_name='Meal1', slug='meal_name', description='desc1', vegetarian_vegan='vegan', price='1', created_on='2022-03-01 12:00')
+        Menu.objects.create(meal_name='Meal1', slug='meal_name',
+                            description='desc1', vegetarian_vegan='vegan',
+                            price='1', created_on='2022-03-01 12:00')
         Category.objects.create(meal_category='Category1')
 
     def test_meal_name_defaults_to_true(self):

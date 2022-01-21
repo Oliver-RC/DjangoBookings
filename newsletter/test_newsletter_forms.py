@@ -8,7 +8,8 @@ class TestNewsletterForm(TestCase):
         form = NewsletterSignUp({'first_name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('first_name', form.errors.keys())
-        self.assertEqual(form.errors['first_name'][0], 'This field is required.')
+        self.assertEqual(
+            form.errors['first_name'][0], 'This field is required.')
 
     def test_fields_are_all_included_in_form_metaclass(self):
         form = NewsletterSignUp()

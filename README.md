@@ -1,6 +1,6 @@
 # Arthur &amp; Alfie's Restaurant
 
-Arthur & Alfie's is website built to showcase their restaurant, allowing a wider target audience to discover whats on offer. There is a page showcasing their menu and lastest blog articles. Furthermore users can register up to the site and log in to their account allowing them to 'like' blogs by the restaurant, providing the owners with subtle feedback on which blogs are the most popular. Users can book a table reservation and even sign up to their newsletter email subscription. Whilst signed in, the user is able to see their future table booking and has the functionality to edit, cancel or add.
+Arthur & Alfie's is website built to showcase their restaurant, allowing a wider target audience to discover what's on offer. There is a page showcasing their menu and latest blog articles. Furthermore users can register up to the site and log in to their account allowing them to 'like' blogs by the restaurant, providing the owners with subtle feedback on which blogs are the most popular. Users can book a table reservation and even sign up to their newsletter email subscription. Whilst signed in, the user is able to see their future table booking and has the functionality to edit, cancel or add.
 
 This is a full-stack project built using Python + Django, HTML, CSS and JavaScript and is for educational purposes. 
 
@@ -35,7 +35,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
   
   #### Frequent User Goals
    1. As a frequent user when I return to the site I want to remain logged in to my account so I can quickly navigate to 'my bookings' page enabling a quick view and access to the bookings functionality.
-   2. As a frequent user I will be reading more content onsite therefore want the blogs to be clicked into to open up the content to read and on the menu page, to click into the meals to read specfic information on each meal.
+   2. As a frequent user I will be reading more content onsite therefore want the blogs to be clicked into to open up the content to read and on the menu page, to click into the meals to read specific information on each meal.
    3. As a frequent user I want my blog likes to remain at the status I left them last time I was on the site.
    4. As a frequent user I want the restaurant to update the menu meals regularly to keep me interested along with the blog posts so I know the latest news.
    5. As a frequent user as I interact with the sites content I want messages to appear on the page informing me if I have submitted or actioned any details.
@@ -43,7 +43,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
   #### Admin User Goals
    1. As an admin user I can log in allowing access to the websites backend database.
    2. As an admin user I can view the table bookings made and either approve or delete the booking. 
-   3. As an admin user I can view the users who have signed up the the newsletter and/or registered an account.
+   3. As an admin user I can view the users who have signed up to the newsletter and/or registered an account.
    4. As an admin user I can add, edit or delete meals from the menu and also add, edit and delete meal categories.
    5. As an admin user I can add, edit or delete blogs. I also have the option to leave as a draft or post to go live on the frontend.
    6. As an admin user I can add, edit or delete different table configurations for the restaurant allowing users to select the correct table.
@@ -53,7 +53,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
  ### Key User Features
   - Responsive site adapting to the screen size with the content not affected.
   - An index page providing the first time users with all the key information needed to know what the site is about.
-  - Restaurant menu page outlining the meal choices avaialble with further links to the specific meal page providing more information.
+  - Restaurant menu page outlining the meal choices available with further links to the specific meal page providing more information.
   - Bookings page for all users (signed up or not) to send a table reservation request.
   - Newsletter page for all users to sign up to the restaurants newsletter email subscription.
   - Blog page for users to see the latest blog news sent out by the restaurant.
@@ -67,7 +67,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
   - Bootstrap grid layout system has been used to create a responsive site.
   - Layout design of each page:
     1. Navigation bar at the top with page title to the left and page links to the right.
-    2. Rotational uber image under the navigation bar for inspiriation and reaffirming to the user it is a restaurant site.
+    2. Rotational uber image under the navigation bar for inspiration and reaffirming to the user it is a restaurant site.
     3. Title of the page and paragraph of text advising the user of the page and its use.
     4. Core content of the page.
     5. Social media footer at the bottom.
@@ -77,11 +77,11 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
   - Colour scheme of the site designed using: https://coolors.co/
   - The header and nav bar are made up using the leading colour of the site, that being Oxford Blue. Dark Sienna drives the visual presence of the icons onsite, with headings complimented in Charcoal. Both Cadet Blue Crayola and Papaya Whip are supporting colours used sparingly in the lower levels such as blog details.
   - The button colours led by Bootstraps classes with Secondary a leading complimentary choice. Danger colour has been used appropriately with the cancelling of reservation button, likewise 'update reservation' in their Info class colour.
-  - Each clickable button or heading link with have hover effects be it underline on heading links or coloour change on buttons. This reinforces the clickable element.
+  - Each clickable button or heading link with have hover effects be it underline on heading links or colour change on the buttons. This reinforces the clickable element.
   ![Site Colour Scheme](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/restaurant_colours.png)
  
  ### Typography
-  - Google Fonts has been used to stylise the text on site with headings and paragraphs complementing each other. Both modern styles with the headings eye catching and paragrpahs content clear to read on smaller screens.
+  - Google Fonts has been used to stylise the text on site with headings and paragraphs complementing each other. Both modern styles with the headings eye catching and paragraphs content clear to read on smaller screens.
   - The [Lilita One](https://fonts.google.com/specimen/Lilita+One?preview.size=61&thickness=8&query=Lilita+One) font is used for the headings throughout the site with Cursive as the fallback.
   - The [PT Sans Narrow](https://fonts.google.com/specimen/PT+Sans+Narrow?preview.size=61&query=pt+sans) font is used for the content paragraphs of the site with Sans-Serif as the fallback.
  
@@ -100,7 +100,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
 
 ## Wireframe
  - Following the initial user stories, design and features. I mocked up the wireframe of the site to incorporate all must have pages and features. 
- - I used a desktop approach for this as it would be the largest screen size to make the content work. Bootstrap grid system helps to flex the content to mobile, so I felt it woudl be benefical to design using the most challenging screen size for the project, larger desktop.
+ - I used a desktop approach for this as it would be the largest screen size to make the content work. Bootstrap grid system helps to flex the content to mobile, so I felt it would be beneficial to design using the most challenging screen size for the project, larger desktop.
    - [Wireframe Link](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/arthur-alfies-restaurant.png)
 
 ## Current Features
@@ -108,7 +108,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
  ### Navigation Bar
  - A responsive navigation bar featured on all pages of the site. As the width exceeds 992px the burger menu is replaced with the title of the pages. As you hover over the page links, the text colour brightens.
  - This section allows the user to easily navigate from page to page without having to use the back button or relooping back to the home page.
- - If the user is logged in, the 'register' and 'log in' pages will revert to 'my bookings' and 'log out'. The 'my bookings' page is restricted so that only logged in users can see. Likewise when 'log in' chnages to 'log out', this is a clear indication to the user of their status (signed in or out).
+ - If the user is logged in, the 'register' and 'log in' pages will revert to 'my bookings' and 'log out'. The 'my bookings' page is restricted so that only logged in users can see. Likewise when 'log in' changes to 'log out', this is a clear indication to the user of their status (signed in or out).
  
  ![Nav Bar](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/nav.JPG)
  
@@ -120,7 +120,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
 
  ### Detail Navigation
  - An additional navigation section has been built into the home page which supports those users who require further information about the features and pages of the site without having to navigation to every page.
- - A title when clicked on navigates to the relevatn page, with an underline hover effect. Each page is supported with a relevant icon, again a further reference point, for those users who prefer or need visual hints.
+ - A title when clicked on navigates to the relevant page, with an underline hover effect. Each page is supported with a relevant icon, again a further reference point, for those users who prefer or need visual hints.
 
  ![Detail Nav](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/detail-nav.JPG)
 
@@ -138,13 +138,13 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
  
  ### The Footer
  - The footer section houses icons of the relevant social media platforms available which allows the user to click on, thus directing them to the relevant social page. The link will open up in a new tab as it gives the user the option to remain on the current page or click onto the social media tab that has just opened.
- - The footer encourages the user to keep connected via social media. It also gives the user confidence of the business / brand given the multiple social plaforms used.
+ - The footer encourages the user to keep connected via social media. It also gives the user confidence of the business / brand given the multiple social platforms used.
  - The footer is responsive and featured at the bottom on all four pages. The footer is identical on each page to provide a consistent look and ease of navigation.
 
  ![Footer](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/footer.JPG)
  
  ### Menu Page
- - A Bootstrap accordion component houses all the menu information for the user. The menu categories make up the clickable expand sections which allows the user to only open up the category of food they are interested in. The category heading is also collapsable.
+ - A Bootstrap accordion component houses all the menu information for the user. The menu categories make up the clickable expand sections which allows the user to only open up the category of food they are interested in. The category heading is also collapsible.
  - Restaurant Admin manage the data shown here to the user. All changes made to both categories or meals will be automatically shown within the accordion.
  - The meal 'view details' button, when clicked on will take the user to the meal detail page showing more information on that specific meal.
 
@@ -201,7 +201,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
    - Automated unavailable dates for customers once the maximum number of bookings have been hit.
    - email confirmation sent to the customer once the status of the booking has been updated by the restaurant.
  - Create a customer account page which shows the user their account information, is editable and can be deleted. Also advises if they are signed up to the newsletter subscriptions.
- - Improve user authentication process by introducting forgotten password reset.
+ - Improve user authentication process by introducing forgotten password reset.
  - Newsletter subscription email content to be built into the database allowing the restaurant admin to draft, post and delete content. Once posted the email is sent to the subscribed users.
  - A contact us page for the user to directly get in touch with the restaurant. A standard element on most sites.
 
@@ -240,7 +240,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
  ![Kanban Board](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/agile-tool.JPG)
  
  ### Manual Testing
-  - Myself and three other family members tested the application. We used a checklist to check all pages loaded correctly with the content expected, the interactive elements worked as intended i.e. buttons, links etc, the forms submitted and authentication worked. Please see the following manual tests checklist and outcome:
+  - Myself and three other family members tested the application. We used a checklist to check all pages loaded correctly with the content expected, the interactive elements worked as intended i.e. buttons, links etc, the forms submitted and authentication worked. The manual tests throughly assess the code written in html, css, python and javascript. Please see the following manual tests checklist and outcome:
   ![Manual Test Checklist](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-checklist.JPG)
   [Manual Test Link](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/manual-testing-checklist.xlsx)
   - Examples of manual testing:
@@ -287,7 +287,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
    ![CSS Validation](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/w3c-css.JPG)
   
   #### JavaScript - 
-   - JS Hint Checker was used to highlight any functional errors, none returned. Warning about using 'let', with it being avaialble in ES6, however I am happy with my Javascript code functioning as intended.
+   - JS Hint Checker was used to highlight any functional errors, none returned. Warning about using 'let', with it being available in ES6, however I am happy with my Javascript code functioning as intended.
 
   #### Python - 
    - PEP8 online check used to check all my python code written in the app. I can confirm all code meets the PEP8 standard and checked through the online tool. I had to remove whitespace from a number of files along with the line of code being too long. 
@@ -296,7 +296,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
 
   #### Lighthouse - 
    - Tested the site on Google Developer Tools Lighthouse for desktop and mobile with good results on both. Performance, accessibility and SEO scored top marks. Best practices at 87 due to browser errors but nothing of concern which impacts the site useability and performance. On mobile, performance dropped to 87 due to image size. I have reformatted and reduced pixel sizes without compromising on desktop performance.
-     - Destop:
+     - Desktop:
        ![Lighthouse Results Desktop](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-desktop.JPG)
      - Mobile:
        ![Lighthouse Results Mobile](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/lighthouse-mobile.JPG)
@@ -310,7 +310,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
   - When reviewing the site content, the images of both the blog detail page and meal detail page would shrink the image to fit. I have changed the viewport height in order to show the images correctly.
   - In the 'My Bookings' page, when using a small screen, the user does have to scroll right to see all the boking details. I have reduced the size of the table however I have not been able to completely change the layout to display vertically. I have used Bootstraps responsive class however, a further fix is needed to improve the UX on this page.
   - Part way through the development when migrating a new model change, it encountered an integrity error. This resulted in having to dumpdata from the other models and saving the information in a json file. I have kept the json data files in the app for safe keeping. 
-  - On the home page, latest news feed, the tiles overspill making them look off center on smaller devices. I beleive this is a bug as I have tried, max-width, viewport width without any success.
+  - On the home page, latest news feed, the tiles overspill making them look off center on smaller devices. I believe this is a bug as I have tried, max-width, viewport width without any success.
   - The menu page accordion, should normally be displayed open, so the blue hover colour is displayed, however I wanted the accordion to be closed when the page opened so the user could see the menu categories. There is a bug that will not allow me to change the blue hover. A further fix is required to improve the UX.
 
 ## Deployment
@@ -319,12 +319,13 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
  ### Create, update and Push to main branch in Github
    - The Code Institute gitpod-full-template was used as a template for the application. 
    - Click 'use this template' button to copy and then create your own repository.
-   - Once the repository has been created you can then click on the 'gitpod' green button to take you to the developement environment whereby you can start coding the app.
-   - Any updates to the code will need to be added, commited and pushed to the main branch.
+   - Once the repository has been created you can then click on the 'gitpod' green button to take you to the development environment whereby you can start coding the app.
+   - Any updates to the code will need to be added, committed and pushed to the main branch.
+   - Just before you deploy the app to Heroku, you will need to change the DEBUG status in settings to False.
  
  ### Cloning
   - To make a local clone:
-   - Log into GitHub or creat an account and navigate to the gitpod repository [here](https://github.com/Oliver-RC/DjangoBookings).
+   - Log into GitHub or create an account and navigate to the gitpod repository [here](https://github.com/Oliver-RC/DjangoBookings).
    - Under the repository name, above the list of files, click on a button called 'Clone'.
    - If cloning with HTTPS, make sure HTTPS is underlined and then click on the clipboard icon to copy. Once clicked the icon will turn to a tick.
    - Open your local IDE open the terminal.
@@ -336,9 +337,9 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
   - The site is hosted on Heroku due to the languages used and the database required for the application. The deployed version uses the main branch in the GitHub repository. In order to deploy in Heroku please use the following steps:
    - Log in to Heroku by creating an account or using an existing profile.
    - Click 'new' and create a new app by entering the name of the app and region you work.
-   - In the app, go to settings as you will need to set up the relevant config vars. The most important varible is the secret key which keeps your application secure.
+   - In the app, go to settings as you will need to set up the relevant config vars. The most important variable is the secret key which keeps your application secure.
    - Navigate to the resource section as you now need to select a database. I used Heroku Postgres.
-   - Seetings and database complete, now to deploy. Connect heroku to your github repository by going to the deploy tab, Deploy a GitHub branch manually. Chose the branch 'main' and click 'deploy branch' button.
+   - Settings and database complete, now to deploy. Connect heroku to your github repository by going to the deploy tab, Deploy a GitHub branch manually. Chose the branch 'main' and click 'deploy branch' button.
    - Heroku will now build the app. Once the build log has completed, you can then click on 'view' to open up your application.
 
 ## Credits
