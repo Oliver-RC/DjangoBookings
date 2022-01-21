@@ -4,7 +4,7 @@ Arthur & Alfie's is website built to showcase their restaurant, allowing a wider
 
 This is a full-stack project built using Python + Django, HTML, CSS and JavaScript and is for educational purposes. 
 
-![Responsive Mockup](#)
+![Responsive Mockup](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/responsive.jpg)
 
 ## Showcase
 
