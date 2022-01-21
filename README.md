@@ -205,6 +205,7 @@ A deployed link to the website can be found [here](#)
  - Create a customer account page which shows the user their account information, is editable and can be deleted. Also advises if they are signed up to the newsletter subscriptions.
  - Improve user authentication process by introducting forgotten password reset.
  - Newsletter subscription email content to be built into the database allowing the restaurant admin to draft, post and delete content. Once posted the email is sent to the subscribed users.
+ - A contact us page for the user to directly get in touch with the restaurant. A standard element on most sites.
 
 ## Technologies Used
 
@@ -233,12 +234,18 @@ A deployed link to the website can be found [here](#)
   - Unsplash: used for blog and meal specific images.
 
 ## Testing
- - I used a combination of manual and automated testing to ensure the application works as intended and meets the users demands.
-
+ - I used a combination of manual and automated testing to ensure the application works as intended and meets the users demands. Each user story was applied to the testing, checking that first time users, returning users, frequent users and admin users saw and used the site as intended.
+ - Whilst understanding my user stories, I used the in-built github projects, kanban board, to identify the key building blocks to my site, which aided my prgress throughout the build. This made sure that I developed a site fit for my users and when testing the site, the outcome was as expected.
+ ![Kanban Board](#)
+ 
  ### Manual Testing
-  - Myself and two other family members tested the application. We used a checklist to check all pages loaded correctly with the content expected, the interactive elements worked as intended i.e. buttons, links etc, the forms submitted, authentication worked. In summary:
-    - All links on the site tested and directed to the correct page.
-    - 
+  - Myself and three other family members tested the application. We used a checklist to check all pages loaded correctly with the content expected, the interactive elements worked as intended i.e. buttons, links etc, the forms submitted and authentication worked. Please see the following manual tests checklist and outcome:
+    ![Manual Test Checklist](#)
+  - ![Manual Test Example 1](#)
+  - ![Manual Test Example 1](#)
+  - ![Manual Test Example 1](#)
+  - ![Manual Test Example 1](#)
+  - ![Manual Test Example 1](#)
   - The devices used to test the application on were:
     - Samsung Note 10
     - Samsung S7
@@ -256,17 +263,16 @@ A deployed link to the website can be found [here](#)
     - Safari
  
  ### Automated Testing
-  - A
-
- ### User Stories Testing
-  - First time user once on the site is able to understand the reasoning  of the site by the site heading but also the following content of the first page with clear section titles. The page reads from top to bottom with the task section and reward chart being the main content. Page links towards the bottom aid the journey of the user onto the next pages.
-  - Returning user is able to interact with the site as intended with the reward table tasks saved to local storage. The game page restarting when returning and the footer icon links enabling the user to search for further content offsite.
-  - Frequent user is able to reset the saved tasks and start afresh by clicking on the end of week reset button. The site is clearly structured and encompasses all the required elements to treat the site as the main reward system for the parent / carer. 
+  - I have run a number of automated tests across the views, models and forms files in each app. Whilst my testing was mainly manual based, I wanted to incorporate key automated tests.
+  - Within the views I tested each app view loaded the correct page and template.
+  - In the forms I checked the data entry and excluded fields worked as intended.
+  - I tested the model for the menu and category app, in that it allowed the storing of data and returned the correct string. 
 
  ### Google Inspect
   - Constantly using Google Inspect in the devtools to check my layout, make amendments, re-check and therefore delivering an end result that fits the brief and user goals. A mobile first design approach with the help of Bootstrap grid system. 
  
  ### Code Validator Testing
+  - All of my code has been passed through the necessary validators with no errors.
   
   #### HTML - 
    - All HTML validation was passed through the official W3C validator.
