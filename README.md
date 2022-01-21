@@ -240,11 +240,11 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
  ### Manual Testing
   - Myself and three other family members tested the application. We used a checklist to check all pages loaded correctly with the content expected, the interactive elements worked as intended i.e. buttons, links etc, the forms submitted and authentication worked. Please see the following manual tests checklist and outcome:
   ![Manual Test Checklist](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-checklist.JPG)
-  [Manual Test Link](#)
+  [Manual Test Link](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/manual-testing-checklist.xlsx)
   - Examples of manual testing:
-  ![Booking form valid submission error checked](#)
-  ![Booking form valid form submitted message confirming](#)
-  ![My Bookings page delete a booking with secondary ask](#)
+  ![Booking form valid submission error checked](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-1.JPG)
+  ![Booking form valid form submitted message confirming](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-2.JPG)
+  ![My Bookings page, delete a booking with secondary ask](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/test-3.JPG)
   - The devices used to test the application on were:
     - Samsung Note 10
     - Samsung S7

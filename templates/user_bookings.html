@@ -10,27 +10,34 @@
 <!-- User Booking Table -->
 <div class="card card-body mx-5">
    <a class="btn btn-secondary btn-sm btn-block mb-4" href="{% url 'bookings' %}">Book a Table</a>
-   <table class="table table-sm">
-      <tr>
-         <th>Date of Booking</th>
-         <th>Time of Booking</th>
-         <th>Table Size</th>
-         <th>Requirements</th>
-         <th>Email</th>
-         <th>Status</th>
-      </tr>
-      {% for booking in reservations %}
-      <tr>
-         <td>{{booking.date|date:'d M Y'}}</td>
-         <td>{{booking.time}}</td>
-         <td>{{booking.table_size}}</td>
-         <td>{{booking.requirements}}</td>
-         <td>{{booking.email}}</td>
-         <td>{{booking.status}}</td>
-         <td><a class="btn btn-sm btn-info" href="{% url 'update_bookings' booking.id %}">Update Reservation</a></td>
-         <td><a class="btn btn-sm btn-danger" href="{% url 'delete_bookings' booking.id %}">Cancel Reservation</a></td>
-      </tr>
-      {% endfor %}
-   </table>
+   <div class="table-responsive">
+      <table class="table table-sm">
+         <thead>
+            <tr>
+               <th>Date of Booking</th>
+               <th>Time of Booking</th>
+               <th>Table Size</th>
+               <th>Requirements</th>
+               <th>Email</th>
+               <th>Status</th>
+            </tr>         
+         </thead>
+         {% for booking in reservations %}
+         <tbody>
+            <tr>
+               <td>{{booking.date|date:'d M Y'}}</td>
+               <td>{{booking.time}}</td>
+               <td>{{booking.table_size}}</td>
+               <td>{{booking.requirements}}</td>
+               <td>{{booking.email}}</td>
+               <td>{{booking.status}}</td>
+               <td><a class="btn btn-sm btn-info" href="{% url 'update_bookings' booking.id %}">Update Reservation</a></td>
+               <td><a class="btn btn-sm btn-danger" href="{% url 'delete_bookings' booking.id %}">Cancel Reservation</a></td>
+            </tr>         
+         </tbody>
+         {% endfor %}
+      </table>      
+   </div>
+
 </div>
 {%endblock%}
