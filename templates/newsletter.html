@@ -1,23 +1,18 @@
 {% extends "base.html" %}
-
 {% block content %}
-
 {% load crispy_forms_tags %}
-
 <!-- Page Title -->
 <div class="title-description">
-    <h2>Newsletter</h2>
-    <p>Sign up to our newsletter to get the latest restaurant news and menus sent directly to your inbox</p>
+   <h2>Newsletter</h2>
+   <p>Sign up to our newsletter to get the latest restaurant news and menus sent directly to your inbox</p>
 </div>
-
 <div class="container">
-    <!-- Newsletter Sign Up Form -->
-    <form method="POST" action="{% url 'sign_up' %}">
-        {{ form | crispy }}
-        {% csrf_token %}
-        <br>
-        <button type="submit" class="btn btn-secondary">Submit</button>
-    </form>
+   <!-- Newsletter Sign Up Form -->
+   <form method="POST" action="{% url 'sign_up' %}">
+      {{ form | crispy }}
+      {% csrf_token %}
+      <br>
+      <button type="submit" class="btn btn-secondary">Submit</button>
+   </form>
 </div>
-
 {%endblock%}

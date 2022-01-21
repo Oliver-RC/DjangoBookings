@@ -222,7 +222,6 @@ A deployed link to the website can be found [here](#)
   - Bootstrap: used to support the frontend design and responsive layout of the site. Key components used to improve the UX of the site.
   - Google Inspect: used to amend and fix display issues along with reviewing responsive break points on each pages content.
   - Balsamiq: used to create the wireframe during the design process.
-  - Mockup design: used to create my responsive design file.
   - Gitpod: used for writing the code and using the command line to commit and push to GitHub.
   - Git: used for version control through the gitpod terminal to commit to Git and push to GitHub.
   - GitHub: used to store the projects code after being pushed from Git. Used to host repository.
@@ -232,6 +231,7 @@ A deployed link to the website can be found [here](#)
   - Coloors: used to select the sites colour palette.
   - Pexels: used for blog and meal specific images.
   - Unsplash: used for blog and meal specific images.
+  - Free Formatter: Both html and css code was passed through the formatter to beautify and format my code.
 
 ## Testing
  - I used a combination of manual and automated testing to ensure the application works as intended and meets the users demands. Each user story was applied to the testing, checking that first time users, returning users, frequent users and admin users saw and used the site as intended.

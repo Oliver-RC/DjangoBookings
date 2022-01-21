@@ -1,181 +1,174 @@
 {% extends "base.html" %}
-
 {% block content %}
-
 <!-- Page Title -->
 <div class="title-description">
-    <h2>Welcome</h2>
-    <p>
-        Dear guests, Arthur &amp; Alfie welcome you to their restaurant. We have been serving family friendly meals for over a decade.
-        <br>
-        Locally sourced, premium quality ingredients. We look forward to seeing you again and again. Our first star service and front of house is waiting for you. 
-        <br>
-        Welcome and have a fine, family friendly dining experience.
-    </p> 
+   <h2>Welcome</h2>
+   <p>
+      Dear guests, Arthur &amp; Alfie welcome you to their restaurant. We have been serving family friendly meals for over a decade.
+      <br>
+      Locally sourced, premium quality ingredients. We look forward to seeing you again and again. Our first star service and front of house is waiting for you. 
+      <br>
+      Welcome and have a fine, family friendly dining experience.
+   </p>
 </div>
-
 <!-- Additional Nav Panel -->
 <div class="container px-4 py-5 alignment" id="featured-3">
-  <div class="row g-4 row-cols-1 row-cols-lg-3">
-    <div class="feature col border">
-      <div class="icon">
-        <i class="fas fa-utensils"></i>
+   <div class="row g-4 row-cols-1 row-cols-lg-3">
+      <div class="feature col border">
+         <div class="icon">
+            <i class="fas fa-utensils"></i>
+         </div>
+         <a href="{% url 'menu' %}" class="icon-link">
+            <h3>Menu</h3>
+         </a>
+         <p>Whether it's breakfast, lunch or dinner, we have your hunger covered! Locally sourced, fresh ingredients are at the heart of our dishes.</p>
       </div>
-      <a href="{% url 'menu' %}" class="icon-link">
-        <h3>Menu</h3>
-      </a>
-      <p>Whether it's breakfast, lunch or dinner, we have your hunger covered! Locally sourced, fresh ingredients are at the heart of our dishes.</p>
-    </div>
-    <div class="feature col border">
-      <div class="icon">
-        <i class="fas fa-book-open"></i>
+      <div class="feature col border">
+         <div class="icon">
+            <i class="fas fa-book-open"></i>
+         </div>
+         <a href="{% url 'bookings' %}" class="icon-link">
+            <h3>Book Now</h3>
+         </a>
+         <p>We would be happy to welcome you to our restaurant, please reserve a table at Arthur &amp; Alfie's by clicking thourgh to the reservation form.</p>
       </div>
-      <a href="{% url 'bookings' %}" class="icon-link">
-        <h3>Book Now</h3>
-      </a>
-      <p>We would be happy to welcome you to our restaurant, please reserve a table at Arthur &amp; Alfie's by clicking thourgh to the reservation form.</p> 
-    </div>
-    <div class="feature col border">
-      <div class="icon">
-        <i class="fas fa-newspaper"></i>
+      <div class="feature col border">
+         <div class="icon">
+            <i class="fas fa-newspaper"></i>
+         </div>
+         <a href="{% url 'sign_up' %}" class="icon-link">
+            <h3>Newsletter</h3>
+         </a>
+         <p>Sign up to our newsletter to get the latest restaurant news and menus sent directly to your inbox.</p>
       </div>
-      <a href="{% url 'sign_up' %}" class="icon-link">
-        <h3>Newsletter</h3>
-      </a>
-      <p>Sign up to our newsletter to get the latest restaurant news and menus sent directly to your inbox.</p>
-    </div>
-    <div class="feature col border">
-      <div class="icon">
-        <i class="fas fa-blog"></i>
+      <div class="feature col border">
+         <div class="icon">
+            <i class="fas fa-blog"></i>
+         </div>
+         <a href="{% url 'blog' %}" class="icon-link">
+            <h3>Blog</h3>
+         </a>
+         <p>For the latest updates and information from the restaurant, please see the below blogs.</p>
       </div>
-      <a href="{% url 'blog' %}" class="icon-link">
-        <h3>Blog</h3>
-      </a>
-      <p>For the latest updates and information from the restaurant, please see the below blogs.</p> 
-    </div>
-    <div class="feature col border">
-      <div class="icon">
-        <i class="fas fa-user-plus"></i>
+      <div class="feature col border">
+         <div class="icon">
+            <i class="fas fa-user-plus"></i>
+         </div>
+         <a href="{% url 'account_signup' %}" class="icon-link">
+            <h3>Register</h3>
+         </a>
+         <p>To see future table bookings or like a blog, please register. Already have an account? Then please Log In.</p>
       </div>
-      <a href="{% url 'account_signup' %}" class="icon-link">
-        <h3>Register</h3>
-      </a>
-      <p>To see future table bookings or like a blog, please register. Already have an account? Then please Log In.</p>
-    </div>
-    <div class="feature col border">
-      <div class="icon">
-        <i class="fas fa-sign-in-alt"></i>
+      <div class="feature col border">
+         <div class="icon">
+            <i class="fas fa-sign-in-alt"></i>
+         </div>
+         <a href="{% url 'account_login' %}" class="icon-link">
+            <h3>Log In</h3>
+         </a>
+         <p>To see future table bookings or like a blog, please sign in. If you have not created an account yet, then please Register.</p>
       </div>
-      <a href="{% url 'account_login' %}" class="icon-link">
-        <h3>Log In</h3>
-      </a>
-      <p>To see future table bookings or like a blog, please sign in. If you have not created an account yet, then please Register.</p>
-    </div>
-  </div>
+   </div>
 </div>
-
 <!-- Blog Feed -->
 <div class="container alignment px-4 py-5">
-  <div class="row border">
-    <div class="container">
-      <div class="icon">
-        <i class="fas fa-bullhorn"></i>
+   <div class="row border">
+      <div class="container">
+         <div class="icon">
+            <i class="fas fa-bullhorn"></i>
+         </div>
+         <a href="{% url 'blog' %}" class="icon-link">
+            <h3>Latest News</h3>
+         </a>
       </div>
-      <a href="{% url 'blog' %}" class="icon-link">
-        <h3>Latest News</h3>
-      </a>
-    </div>
-    <div class="container">
-      <div class="row g-0">
-        {% for blog in blogs %}
-          <div class="card bg-dark text-white col-lg m-2">
-            <img src="{{blog.featured_image.url}}" class="card-img news-card" alt="food image relating to the blog post">
-            <div class="card-img-overlay">
-              <h5 class="card-title">{{blog.title}}</h5>
-              <p class="card-text">{{blog.excerpt}}</p>
-              <p class="card-text">{{blog.updated_on}}</p>
+      <div class="container">
+         <div class="row g-0">
+            {% for blog in blogs %}
+            <div class="card bg-dark text-white col-lg m-2">
+               <img src="{{blog.featured_image.url}}" class="card-img news-card" alt="food image relating to the blog post">
+               <div class="card-img-overlay">
+                  <h5 class="card-title">{{blog.title}}</h5>
+                  <p class="card-text">{{blog.excerpt}}</p>
+                  <p class="card-text">{{blog.updated_on}}</p>
+               </div>
             </div>
-          </div>
-        {% endfor %}
+            {% endfor %}
+         </div>
       </div>
-    </div>    
-  </div>
+   </div>
 </div>
-
 <!-- Restaurant hours and Directions -->
 <div class="container px-4 py-5">
-  <div class="row border">
-    <div class="col-lg">
-      <div class="container">
-        <div class="container alignment">
-          <div class="icon">
-            <i class="fas fa-door-open"></i>
-          </div>
-          <h3>Opening Hours</h3>
-        </div>
-        
-        <table class="table table-striped table-bordered table-sm">
-          <thead>
-            <tr>
-              <th scope="col">Day</th>
-              <th scope="col">Opening Time</th>
-              <th scope="col">Closing Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Monday</th>
-              <td>11:30am</td>
-              <td>9pm</td>
-            </tr>
-            <tr>
-              <th scope="row">Tuesday</th>
-              <td>11:30am</td>
-              <td>9pm</td>
-            </tr>
-            <tr>
-              <th scope="row">Wednesday</th>
-              <td>11:30am</td>
-              <td>9pm</td>
-            </tr>
-            <tr>
-              <th scope="row">Thursday</th>
-              <td>11:30am</td>
-              <td>9pm</td>
-            </tr>
-            <tr>
-              <th scope="row">Friday</th>
-              <td>10:00am</td>
-              <td>9pm</td>
-            </tr>
-            <tr>
-              <th scope="row">Saturday</th>
-              <td>10:00am</td>
-              <td>9pm</td>
-            </tr>
-            <tr>
-              <th scope="row">Sunday</th>
-              <td>10:00am</td>
-              <td>8pm</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>    
-    </div>
-    <div class="col-lg">
-      <div class="container alignment">
-        <div class="container">
-          <div class="icon">
-            <i class="fas fa-map"></i>
-          </div>
-          <h3>Directions</h3>
-        </div>
-        <div>
-          <iframe allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfSQPij47dkgRqbdCr7ygd14&key=AIzaSyAXJMO-uPQGERiN6DUWGHy_18t-On0xPsQ"></iframe>
-        </div>
-      </div>      
-    </div>    
-  </div>
+   <div class="row border">
+      <div class="col-lg">
+         <div class="container">
+            <div class="container alignment">
+               <div class="icon">
+                  <i class="fas fa-door-open"></i>
+               </div>
+               <h3>Opening Hours</h3>
+            </div>
+            <table class="table table-striped table-bordered table-sm">
+               <thead>
+                  <tr>
+                     <th scope="col">Day</th>
+                     <th scope="col">Opening Time</th>
+                     <th scope="col">Closing Time</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th scope="row">Monday</th>
+                     <td>11:30am</td>
+                     <td>9pm</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Tuesday</th>
+                     <td>11:30am</td>
+                     <td>9pm</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Wednesday</th>
+                     <td>11:30am</td>
+                     <td>9pm</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Thursday</th>
+                     <td>11:30am</td>
+                     <td>9pm</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Friday</th>
+                     <td>10:00am</td>
+                     <td>9pm</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Saturday</th>
+                     <td>10:00am</td>
+                     <td>9pm</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Sunday</th>
+                     <td>10:00am</td>
+                     <td>8pm</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div class="col-lg">
+         <div class="container alignment">
+            <div class="container">
+               <div class="icon">
+                  <i class="fas fa-map"></i>
+               </div>
+               <h3>Directions</h3>
+            </div>
+            <div>
+               <iframe allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfSQPij47dkgRqbdCr7ygd14&key=AIzaSyAXJMO-uPQGERiN6DUWGHy_18t-On0xPsQ"></iframe>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
-
 {%endblock%}

@@ -1,148 +1,149 @@
 nav {
-    background-color: #001b2e;
+	background-color: #001b2e;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-family: 'Lilita One', cursive;
-    color: #294c60;
+	font-family: 'Lilita One', cursive;
+	color: #294c60;
 }
 
 p {
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 1.2rem;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 1.2rem;
 }
 
 table {
-    height: 400px;
+	height: 400px;
 }
 
 iframe {
-    width: 100%;
-    height: 400px;
+	width: 100%;
+	height: 400px;
 }
+
 .title {
-    font-family: 'Lilita One', cursive;
-    font-size: 3rem;
+	font-family: 'Lilita One', cursive;
+	font-size: 3rem;
 }
 
 .header-image {
-    height: 60vh;
-    object-fit: cover;
+	height: 60vh;
+	object-fit: cover;
 }
 
 .title-description {
-    text-align: center;
+	text-align: center;
 }
 
 .sub-heading {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 .image-container {
-    position: relative;
+	position: relative;
 }
 
 .masthead,
 .masthead-meal {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 50vh;
-    width: 100%;
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	height: 50vh;
+	width: 100%;
 }
 
 .masthead-text {
-    background-color: #ADB6C4;
-    color: white;
-    position: relative;
+	background-color: #ADB6C4;
+	color: white;
+	position: relative;
 }
 
 .masthead-image {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 
 .blog-image,
 .meal-image {
-    height: 50vh;
-    width: 100%;
+	height: 50vh;
+	width: 100%;
 }
 
 .post-link {
-    text-decoration: none;
-    color: #294c60;
+	text-decoration: none;
+	color: #294c60;
 }
 
 .post-link:hover,
 .page-link {
-    color: #53131e;
+	color: #53131e;
 }
 
 .post-title,
 .meal-title {
-    margin-top: 20%;
-    margin-left: 5%;
+	margin-top: 20%;
+	margin-left: 5%;
 }
 
 .post-subtitle,
 .meal-subtitle {
-    margin-left: 5%;
-    color: #294C60;
+	margin-left: 5%;
+	color: #294C60;
 }
 
 .meals {
-    text-align: center;
-    margin-bottom: 1.5rem;
+	text-align: center;
+	margin-bottom: 1.5rem;
 }
 
 .meal-image {
-    height: 200px;
-    width: 200px;
-    object-fit: contain;
+	height: 200px;
+	width: 200px;
+	object-fit: contain;
 }
 
 .meal-link {
-    color: #294c60;
+	color: #294c60;
 }
 
-.meal-container{
-    width: 70vw;
+.meal-container {
+	width: 70vw;
 }
 
 .meal-detail-image {
-    width: 40vh;
-    height: auto;
+	width: 40vh;
+	height: auto;
 }
 
 .accordion-button {
-    color: #294c60;
+	color: #294c60;
 }
 
 .alignment {
-    text-align: center;
+	text-align: center;
 }
 
 .icon {
-    font-size: 2em;
-    color: #53131e;
+	font-size: 2em;
+	color: #53131e;
 }
 
 .icon-link {
-    color: #294c60;
+	color: #294c60;
 }
 
 .icon-link:hover {
-    color: #294c60;
-    text-decoration: underline solid #53131e 5px;
+	color: #294c60;
+	text-decoration: underline solid #53131e 5px;
 }
 
 .news-card {
-    height: 30vh;
-    width: auto;
-    object-fit: cover;
-    filter: brightness(60%);
+	height: 30vh;
+	width: auto;
+	object-fit: cover;
+	filter: brightness(60%);
 }

@@ -1,50 +1,46 @@
 {% extends "base.html" %}
-
 {% block content %}
-
 <!-- Page Title -->
 <div class="title-description">
-    <h2>Menu</h2>
-    <p>
-        Whether it's breakfast, lunch or dinner, we have your hunger covered! Locally sourced, fresh ingredients are at the heart of our dishes. 
-            <br>
-        Take a peak at our dishes below, find your favourites and we look forward to welcoming you to Arthur &amp; Alfie's.
-    </p>
+   <h2>Menu</h2>
+   <p>
+      Whether it's breakfast, lunch or dinner, we have your hunger covered! Locally sourced, fresh ingredients are at the heart of our dishes. 
+      <br>
+      Take a peak at our dishes below, find your favourites and we look forward to welcoming you to Arthur &amp; Alfie's.
+   </p>
 </div>
-
 <div class="container">
-    <div class="accordion" id="accordionExample">
-        <!-- Menu Categories -->
-        <div class="accordion-item">
-        {% for category in category_list %}
-            <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ category.id }}" aria-expanded="false" aria-controls="collapseOne{{ category.id }}">
-                {{ category }}
-                </button>
-            </h2>
-            <div id="collapseOne{{ category.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne">
-                <div class="accordion-body">
-                    <!-- Meals -->
-                    <div class="container-fluid meals">
-                        <div class="row">
-                        {% for menu in menu_list %} 
-                            {% if menu.category == category %}
-                                <div class="col-md-4">
-                                    <img src="{{ menu.featured_image.url }}" alt="picture of meal" class="meal-image">
-                                    <h3 class="meal-link">{{ menu }}</h3>
-                                    <p class="meal-link"><strong>Price: £{{ menu.price }}</strong></p>            
-                                    <p class="meal-link">Vegetarian: {{ menu.vegetarian_vegan }}</p>
-                                    <p class="meal-link"><a class="btn btn-secondary" href="{% url 'menu_detail' menu.slug %}">View details »</a></p>
-                                </div>
-                            {% endif %}
-                        {% endfor %}      
-                        </div>
-                    </div>            
-                </div>
+   <div class="accordion" id="accordionExample">
+      <!-- Menu Categories -->
+      <div class="accordion-item">
+         {% for category in category_list %}
+         <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ category.id }}" aria-expanded="false" aria-controls="collapseOne{{ category.id }}">
+            {{ category }}
+            </button>
+         </h2>
+         <div id="collapseOne{{ category.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne">
+            <div class="accordion-body">
+               <!-- Meals -->
+               <div class="container-fluid meals">
+                  <div class="row">
+                     {% for menu in menu_list %} 
+                     {% if menu.category == category %}
+                     <div class="col-md-4">
+                        <img src="{{ menu.featured_image.url }}" alt="picture of meal" class="meal-image">
+                        <h3 class="meal-link">{{ menu }}</h3>
+                        <p class="meal-link"><strong>Price: £{{ menu.price }}</strong></p>
+                        <p class="meal-link">Vegetarian: {{ menu.vegetarian_vegan }}</p>
+                        <p class="meal-link"><a class="btn btn-secondary" href="{% url 'menu_detail' menu.slug %}">View details »</a></p>
+                     </div>
+                     {% endif %}
+                     {% endfor %}      
+                  </div>
+               </div>
             </div>
-        {% endfor %}
-        </div>
-    </div>    
+         </div>
+         {% endfor %}
+      </div>
+   </div>
 </div>
-
 {%endblock%}

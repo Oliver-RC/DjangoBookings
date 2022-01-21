@@ -1,20 +1,16 @@
 {% extends "base.html" %}
-
 {% block content %}
-
 <div class="container-fluid alignment">
-    <!-- Delete Restaurant Booking -->
-    <div class="card card-body text-center">
-        <p>Are you sure you want to delete the table reservation under the name of "{{reserve}}"?</p>
-        <p>Date: {{reserve.date|date:'d M Y'}}, <br> Time: {{reserve.time}}, <br> Table Size: {{reserve.table_size}}<p>
-
-        <form action="{% url 'delete_bookings' reserve.id %}" method="POST"> 
-            {% csrf_token %}
-            <a class="btn btn-warning" href="{% url 'user_bookings' %}">Cancel</a>
-
-            <input class="btn btn-danger" type="submit" name="Confirm">
-        </form>
-    </div>
+   <!-- Delete Restaurant Booking -->
+   <div class="card card-body text-center">
+      <p>Are you sure you want to delete the table reservation under the name of "{{reserve}}"?</p>
+      <p>Date: {{reserve.date|date:'d M Y'}}, <br> Time: {{reserve.time}}, <br> Table Size: {{reserve.table_size}}
+      <p>
+      <form action="{% url 'delete_bookings' reserve.id %}" method="POST"> 
+         {% csrf_token %}
+         <a class="btn btn-warning" href="{% url 'user_bookings' %}">Cancel</a>
+         <input class="btn btn-danger" type="submit" name="Confirm">
+      </form>
+   </div>
 </div>
-
 {%endblock%}
