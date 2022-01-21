@@ -19,7 +19,7 @@ def reserve_table(request):
         else:
             reserve_form.save()
             messages.success(request, 'Booking received! The restaurant will'
-                             'call to confirm your booking.')
+                             ' call to confirm your booking.')
             reserve_form = BookingForm()
     else:
         reserve_form = BookingForm()

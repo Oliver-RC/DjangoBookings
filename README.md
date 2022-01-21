@@ -1,11 +1,3 @@
-Django All Auto documentation
-using CI Django Blog walkthrough to help build inital restaurant blog.
-Harvester menu
-https://www.youtube.com/watch?v=EX6Tt-ZW0so
-
-
-
-
 # Arthur &amp; Alfie's Restaurant
 
 Arthur & Alfie's is website built to showcase their restaurant, allowing a wider target audience to discover whats on offer. There is a page showcasing their menu and lastest blog articles. Furthermore users can register up to the site and log in to their account allowing them to 'like' blogs by the restaurant, providing the owners with subtle feedback on which blogs are the most popular. Users can book a table reservation and even sign up to their newsletter email subscription. Whilst signed in, the user is able to see their future table booking and has the functionality to edit, cancel or add.
@@ -16,17 +8,19 @@ This is a full-stack project built using Python + Django, HTML, CSS and JavaScri
 
 ## Showcase
 
-A deployed link to the website can be found [here](#)
+A deployed link to the website can be found [here](https://arthuralfie.herokuapp.com/)
 
 ## User Experience (UX)
 
  ### User Stories
+ - In the planning stages of the app, I used a UX approach by applying various user stories and the different stages of using the app, to create a list of builds needed to make the application fit for purpose, both for frontend users and backend admin users.
+ - I used the Github Projects, Kanban tool as my agile tool to manage the planning and structure of the build.
 
   #### First Time Visitor Goals
    1. As a first time visitor I want to understand what the site is about and who the site is intended for. Starting with the title and core content of the index page, these elements should give a clear idea.
    2. As a first time visitor I want to be able to clearly navigate around the site knowing which page I am on and what information I should expect to find.
    3. As a first time visitor the flow of each page should read top to bottom with the interactive content following suit. The home / index page should then allow the user to flow onto the next relevant page.
-   4. As a first time visitor I want the content to be in a consistant and simple structure from page to page. Navigation bar at the top, main body of the page and footer at the bottom.
+   4. As a first time visitor I want the content to be in a consistent and simple structure from page to page. Navigation bar at the top, main body of the page and footer at the bottom.
    5. As a first time visitor the interactive content should be intuitive and not require content heavy text to explain how to use.
    6. As a first time visitor I want to see specific restaurant content like opening times, directions, the menu, blog and to book a table.
    7. As a first time visitor I do not want to necessarily register as a user to book a table, nor restrict me from signing up to the newsletter or read the blogs.
@@ -69,7 +63,7 @@ A deployed link to the website can be found [here](#)
  
  ### Structure
   - The site is made up of an initial home page, menu page, book now page, newsletter page, blog page, register page, log in page and my bookings page for logged in users.
-  - Each page only has the relevant content expected in order to keep the site simple to understand. Every page is in a consistant style, format and layout aiding usability.
+  - Each page only has the relevant content expected in order to keep the site simple to understand. Every page is in a consistent style, format and layout aiding usability.
   - Bootstrap grid layout system has been used to create a responsive site.
   - Layout design of each page:
     1. Navigation bar at the top with page title to the left and page links to the right.
@@ -77,14 +71,14 @@ A deployed link to the website can be found [here](#)
     3. Title of the page and paragraph of text advising the user of the page and its use.
     4. Core content of the page.
     5. Social media footer at the bottom.
-    6. Consistant colour scheme throughout each page specifically on the header / nav bar, page link buttons and footer.
+    6. Consistent colour scheme throughout each page specifically on the header / nav bar, page link buttons and footer.
  
  ### Colour Scheme
   - Colour scheme of the site designed using: https://coolors.co/
   - The header and nav bar are made up using the leading colour of the site, that being Oxford Blue. Dark Sienna drives the visual presence of the icons onsite, with headings complimented in Charcoal. Both Cadet Blue Crayola and Papaya Whip are supporting colours used sparingly in the lower levels such as blog details.
   - The button colours led by Bootstraps classes with Secondary a leading complimentary choice. Danger colour has been used appropriately with the cancelling of reservation button, likewise 'update reservation' in their Info class colour.
   - Each clickable button or heading link with have hover effects be it underline on heading links or coloour change on buttons. This reinforces the clickable element.
-  ![Site Colour Scheme](#)
+  ![Site Colour Scheme](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/restaurant_colours.png)
  
  ### Typography
   - Google Fonts has been used to stylise the text on site with headings and paragraphs complementing each other. Both modern styles with the headings eye catching and paragrpahs content clear to read on smaller screens.
@@ -103,12 +97,11 @@ A deployed link to the website can be found [here](#)
   - Bookings database: There are two models, one for the restaurant table size choices, the owner can edit, add and delete table sizes to suit whats available and thus allowing customers to book the right table size. The other model for bookings. This is where the admin staff can see the bookings submitted via the form. On here they have the functionality to change the status of the booking to 'confirmed' in order to provide feedback to the customer. The admin staff can also access the customers details if needed to reach out directly to the user who booked the table.
   - Menu database: Two models, one for meal categories for the admin staff to assign categories to meals i.e starter, main or dessert. The option to add categories, amend or delete. Changes here are directly portrayed on the frontend. The second model for adding meals to the menu. The admin staff can publish the meal or leave as draft, whichever is needed. All relevant meal details found here e.g. price, vegetarian option, meal image, which again will directly show on the sites frontend when published. 
   - Newsletter database: The model stores all customers who sign up to the newsletter subscription. Admin staff can view customer name and email data if needed.
-  ![Model Data Relational Diagram](#)
 
 ## Wireframe
- - [Desktop Wireframe](#)
- - [Tablet Wireframe](#)
- - [Mobile Wireframe](#)
+ - Following the initial user stories, design and features. I mocked up the wireframe of the site to incorporate all must have pages and features. 
+ - I used a desktop approach for this as it would be the largest screen size to make the content work. Bootstrap grid system helps to flex the content to mobile, so I felt it woudl be benefical to design using the most challenging screen size for the project, larger desktop.
+  - [Wireframe](#)
 
 ## Current Features
 
@@ -168,6 +161,7 @@ A deployed link to the website can be found [here](#)
  - An email will be sent to the address provided by the user to confirm their sign up.
 
  ![Newsletter](#)
+ ![Email](#)
 
  ### Blog Page
  - Restaurant posted blogs are shown to users on the Blog page. Every blog is shown on an individual card with a supporting image, author of the blog from the restaurant, the date of the post, how many likes and a small exert on the content. 
@@ -182,7 +176,9 @@ A deployed link to the website can be found [here](#)
  - The log in page asks for the username and password of the account so the user can sign in and interact with the blogs and future bookings.
  - The log out page allows the user to log out of the site.
 
- ![Register and Log In / Out](#)
+ ![Register](#)
+ ![Log In](#)
+ ![Log Out](#)
 
  ### My Bookings Page
  - The 'My Bookings' page will show the signed in user, only their bookings made via the 'Book Now' form. 
@@ -215,7 +211,8 @@ A deployed link to the website can be found [here](#)
   - [HTML](https://en.wikipedia.org/wiki/HTML5)
   - [CSS](https://en.wikipedia.org/wiki/CSS)
   - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
- ### Frameworks, Libraries & Programs Used
+ 
+ ### Frameworks, Libraries & Resources Used
   - Django: the framework used to build the project and apps.
   - Heroku: used to deploy my project and incorporate their postgreSQL resource.
   - Cloudinary: used to store my database images.
@@ -232,20 +229,16 @@ A deployed link to the website can be found [here](#)
   - Pexels: used for blog and meal specific images.
   - Unsplash: used for blog and meal specific images.
   - Free Formatter: Both html and css code was passed through the formatter to beautify and format my code.
+  - ami.responsivedesign used to create my responsive design file.
 
 ## Testing
  - I used a combination of manual and automated testing to ensure the application works as intended and meets the users demands. Each user story was applied to the testing, checking that first time users, returning users, frequent users and admin users saw and used the site as intended.
- - Whilst understanding my user stories, I used the in-built github projects, kanban board, to identify the key building blocks to my site, which aided my prgress throughout the build. This made sure that I developed a site fit for my users and when testing the site, the outcome was as expected.
+ - Whilst understanding my user stories, I used the in-built github projects, kanban board, to identify the key building blocks to my site, which aided my progress throughout the build. This made sure that I developed a site fit for my users and when testing the site, the outcome was as expected.
  ![Kanban Board](#)
  
  ### Manual Testing
   - Myself and three other family members tested the application. We used a checklist to check all pages loaded correctly with the content expected, the interactive elements worked as intended i.e. buttons, links etc, the forms submitted and authentication worked. Please see the following manual tests checklist and outcome:
-    ![Manual Test Checklist](#)
-  - ![Manual Test Example 1](#)
-  - ![Manual Test Example 1](#)
-  - ![Manual Test Example 1](#)
-  - ![Manual Test Example 1](#)
-  - ![Manual Test Example 1](#)
+  ![Manual Test Checklist](#)
   - The devices used to test the application on were:
     - Samsung Note 10
     - Samsung S7
@@ -299,67 +292,53 @@ A deployed link to the website can be found [here](#)
    - Tested on [Wave](https://wave.webaim.org/) which helped me with accessibility, making sure my layout and design worked well with screen readers. No errors detected or contrast errors.
    ![Wave](#)
  
- ### Bugs
-  - The 
+ ### Bugs and Fixes
+  - When I initially deployed the app to Heroku, the main carousel images in the base.html file did not load nor did many css properties. I had to remove the image files stored in the static folder and upload to cloudinary, then amend the image source link.
+  - When reviewing the site content, the images of both the blog detail page and meal detail page would shrink the image to fit. I have changed the viewport height in order to show the images correctly.
+  - In the 'My Bookings' page, when using a small screen, the user does have to scroll right to see all the boking details. I have reduced the size of the table however I have not been able to completely change the layout to display vertically. A further fix is needed to improve UX on this page.
 
 ## Deployment
+ - I used Github to manage the development stages, pushing my updated files to the main branch of the repository. It is the Github main branch that has been used to deploy the app through Heroku. Steps below show the process in the deployment stages.
 
- ### Hosting
-  - The site was deployed to GitHub Pages using the following steps:
-   - Log in to GitHub and locate my repository: Oliver-RC / collection-of-crafts.
-   - Locate the 'Settings' link in the navigation bar an click into.
-   - Find the 'Pages' section within Settings and click into. 
-   - Under 'source', click on 'none' and a dropdown will apear, click on 'main' and save.
-   - The page will refresh (it may take a while to update) and there will be a link stating: 'Your site is published at'.
-   - Click on the link to open the site.
+ ### Create, update and Push to main branch in Github
+   - The Code Institute gitpod-full-template was used as a template for the application. 
+   - Click 'use this template' button to copy and then create your own repository.
+   - Once the repository has been created you can then click on the 'gitpod' green button to take you to the developement environment whereby you can start coding the app.
+   - Any updates to the code will need to be added, commited and pushed to the main branch.
+ 
  ### Cloning
-  - To make a local Clone:
-   - Log into GitHub or creat an account and navigate to the gitpod repository [here](https://github.com/Oliver-RC/reward-chart).
+  - To make a local clone:
+   - Log into GitHub or creat an account and navigate to the gitpod repository [here](https://github.com/Oliver-RC/DjangoBookings).
    - Under the repository name, above the list of files, click on a button called 'Clone'.
    - If cloning with HTTPS, make sure HTTPS is underlined and then click on the clipboard icon to copy. Once clicked the icon will turn to a tick.
    - Open your local IDE open the terminal.
    - Change the current working directory to the location where you want the cloned directory to be.
    - Type git clone, and then paste the URL you copied earlier.
-   - Press enter to create your local clone.
- ### Updates and Push to Hosting
-   - Any updates to the code will need to be commited and pushed to the master branch. This will automatically update the hosted site.
- ### Heroku
-   - A
+   - Press enter to create your local clone. 
+ 
+ ### Hosting on Heroku
+  - The site is hosted on Heroku due to the languages used and the database required for the application. The deployed version uses the main branch in the GitHub repository. In order to deploy in Heroku please use the following steps:
+   - Log in to Heroku by creating an account or using an existing profile.
+   - Click 'new' and create a new app by entering the name of the app and region you work.
+   - In the app, go to settings as you will need to set up the relevant config vars. The most important varible is the secret key which keeps your application secure.
+   - Navigate to the resource section as you now need to select a database. I used Heroku Postgres.
+   - Seetings and database complete, now to deploy. Connect heroku to your github repository by going to the deploy tab, Deploy a GitHub branch manually. Chose the branch 'main' and click 'deploy branch' button.
+   - Heroku will now build the app. Once the build log has completed, you can then click on 'view' to open up your application.
 
 ## Credits
+ - When building the application I have constantly had to refer to a number of documents and sites of resource online in order to overcome challenges in my code. Below is a list of credits and resources used.
 
- ### Content
-  - The inspiration for the interactive reward chart was gained from Web Dev Simplified - How to Code A Better To-Do List - Tutorial [YouTube](https://www.youtube.com/watch?v=W7FaYfuwu70&t=517s). I was able to understand Javascript that bit more and learn from the content whilst adapting it to my interactive reward chart.
-  - For the star game, I took ideas from many rock, paper, scissors javascript code, however Code with Ania Kubow - 3 ways to code Rock Paper Scissors in JavaScript (Beginner to Intermediate to Advanced!) [YouTube](https://www.youtube.com/watch?v=RwFeg0cEZvQ) was credited with my key learning.
-  - I wanted my nav bar to be responsive using Javascript therefore used Web Dev Simplified - Responsive Navbar Tutorial [YouTube](https://www.youtube.com/watch?v=At4B7A4GOPg) for further insight on how to action.
-  - The reward chart needed to be responsive on mobile and display content suited to the screen size. I used IB-Media - Making a Responsive Table Using HTML & CSS [YouTube](https://www.youtube.com/watch?v=QjW5TsNquH8) for inspiration and learning.
-  - Within my reward table I wanted clickable star icons using checkboxes, for this I took learning from [CSS-Tricks](https://css-tricks.com/the-checkbox-hack/)
- ### Media
-  - The Favicon was created from Favicon.io [here](https://favicon.io/favicon-generator/)
-  - Icons included within the content of the size used from Font Awesome [here](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free)
-  - Images used across the site taken from Unsplash [here](https://unsplash.com/). Specfic images used are:
-   - A Sweet Treat Photo by [Analia Baggiano](https://unsplash.com/s/photos/sweets?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash)
-   - Extra Time on Tablet Photo by [José Reyes](https://unsplash.com/s/photos/tablet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash)
-   - A New Magazine Photo by [Omar Flores](https://unsplash.com/s/photos/kids-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash)
-   - A New Toy Photo by [Robo Wunderkind](https://unsplash.com/s/photos/childrens-toys?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash)
- ### Additional Resource
-  - [Code Institue sample README file](https://github.com/Code-Institute-Solutions/readme-template/blob/master/README.md) helped me to further build my own README for Collection of Crafts (MS1) project.
-  - [Code Institue old sample README file](https://github.com/Code-Institute-Solutions/SampleREADME#readme) helped me to further build my own README for Collection of Crafts (MS1) project.
+  - [Code Institue sample README file](https://github.com/Code-Institute-Solutions/readme-template/blob/master/README.md) helped me to further build my own README.
+  - [Code Institue old sample README file](https://github.com/Code-Institute-Solutions/SampleREADME#readme) helped me with additional content to further build my own README.
   - [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) was referenced for the languages used in this project. 
-  - [Mockup design](http://ami.responsivedesign.is/#) used to create my responsive design file.
-  - [W3schools](https://www.w3schools.com/) for various code information and trouble shooting.
-  - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for more Javascript specific syntax and function code information.
-  - [Favicon](https://favicon.io/) used to generate the favicon icon of the site.
-  - [Google fonts](https://fonts.google.com/) used to import the site fonts.
-  - [Balsamiq wireframe](https://balsamiq.com/) used to create the wireframe during the design process.
-  - [Font Awesome](https://fontawesome.com/) used for icons in the footer and icons within the content of the site for aesthetic and UX purposes.
-  - [Unsplash](https://unsplash.com/) images taken from unsplash.
-  - [HTML Validator](https://validator.w3.org/) used to test validity of HTML.
-  - [CSS Validator](https://validator.w3.org/) used to test validity of CSS.
-  - [Wave Accessibility](https://wave.webaim.org/) used to test accessibility of the site.
-  - [JS Hint Checker](https://jshint.com/) used to test validity and working functions of Javascript.
- ### Acknowledgements
-  - Brian Macharia - Mentor support. A thank you for your guidance throughout the project.
+  - [W3schools](https://www.w3schools.com/) for various code information and trouble shooting, especially python.
+  - [Django Documentation](https://docs.djangoproject.com/en/4.0/) for various code information and trouble shooting with the Django framework.
+  - [Harvester](https://www.harvester.co.uk/) for the initial design and content research of a restaurant app.
+  - [Dennis Ivy](https://dennis-sourcecode.herokuapp.com/) Django videos to help go through the framework and understand various key features.
+
+ ## Acknowledgements
+  - Brian Macharia - Mentor support. A thank you for your guidance throughout the early build of the project.
   - Code Institue Slack Community - A great resource and helpful community supported me through the challenges encountered.
+  - Tutor Support - amazing help from a number of tutors when I really did struggle to overcome the issues myself.
 
 **This project is for educational use only and was created for the Code Institue Portfolio Project 4: Full-Stack Toolkit**
