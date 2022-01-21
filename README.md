@@ -303,6 +303,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
   - When reviewing the site content, the images of both the blog detail page and meal detail page would shrink the image to fit. I have changed the viewport height in order to show the images correctly.
   - In the 'My Bookings' page, when using a small screen, the user does have to scroll right to see all the boking details. I have reduced the size of the table however I have not been able to completely change the layout to display vertically. A further fix is needed to improve UX on this page.
   - Part way through the development when migrating a new model change, it encountered an integrity error. This resulted in having to dumpdata from the other models and saving the information in a json file. I have kept the json data files in the app for safe keeping. 
+  - On the home page, latest news feed, the tiles overspill making them look off center on smaller devices. I beleive this is a bug as I have tried, max-width, viewport width without any success.
 
 ## Deployment
  - I used Github to manage the development stages, pushing my updated files to the main branch of the repository. It is the Github main branch that has been used to deploy the app through Heroku. Steps below show the process in the deployment stages.
