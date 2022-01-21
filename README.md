@@ -86,7 +86,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
   - The [PT Sans Narrow](https://fonts.google.com/specimen/PT+Sans+Narrow?preview.size=61&query=pt+sans) font is used for the content paragraphs of the site with Sans-Serif as the fallback.
  
  ### Imagery
-  - Underneath the navigation bar, there is a Bootstrap carousel which rotates through three images. These are focused on served food within a restaurant sitting and provide a visual representation of the website. This is stored in the local, static > images, folder.
+  - Underneath the navigation bar, there is a Bootstrap carousel which rotates through three images. These are focused on served food within a restaurant sitting and provide a visual representation of the website. This is stored in the Cloudinary database.
   - Each menu item is supported with a visual image of the dish supporting user experience. This is stored in the Cloudinary database.
   - Each blog post has a relevant supporting image with ties into the content of the blog. This is stored in the Cloudinary database.
   - Icons feature heavily in the additional 'detail led' card navigation section on the landing page. Again, rather than text heavily and users having to read the information, these icons give an indication of what the heading link, links to. Icons have been sourced from fontawesome.
@@ -101,7 +101,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
 ## Wireframe
  - Following the initial user stories, design and features. I mocked up the wireframe of the site to incorporate all must have pages and features. 
  - I used a desktop approach for this as it would be the largest screen size to make the content work. Bootstrap grid system helps to flex the content to mobile, so I felt it woudl be benefical to design using the most challenging screen size for the project, larger desktop.
-  - [Wireframe](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/arthur-alfies-restaurant.png)
+   - [Wireframe](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/arthur-alfies-restaurant.png)
 
 ## Current Features
 
@@ -125,7 +125,7 @@ A deployed link to the website can be found [here](https://arthuralfie.herokuapp
  ![Detail Nav](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/detail-nav.JPG)
 
  ### Latest News
- - A snapshot of the blogs that have been posted by the restaurant. The users first landing on the page will get a feel for the type of blog / news content come out from the restaurant without having to navigate to the blog page specifically.
+ - A snapshot of the blogs that have been posted by the restaurant. The users who first land on the page will get a feel for the type of blog / news content that comes out from the restaurant without having to navigate to the blog page specifically.
  - This data is stored in the database and is updated when the restaurant admin post a new blog article. 
 
  ![Latest News](https://github.com/Oliver-RC/DjangoBookings/blob/main/assets/news.JPG)
